@@ -25,10 +25,30 @@ function initSidebar() {
   const overlay = document.getElementById('sidebarOverlay');
   if (!sidebar) return;
 
+  const isMobile = () => window.innerWidth <= 1024;
+
+  const lockBody = () => {
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
+  };
+  const unlockBody = () => {
+    document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.width = '';
+  };
+
   if (toggle) toggle.addEventListener('click', () => {
-    if (window.innerWidth <= 1024) {
-      sidebar.classList.toggle('mobile-open');
-      overlay.classList.toggle('active');
+    if (isMobile()) {
+      if (sidebar.classList.contains('mobile-open')) {
+        sidebar.classList.remove('mobile-open');
+        overlay.classList.remove('active');
+        unlockBody();
+      } else {
+        sidebar.classList.add('mobile-open');
+        overlay.classList.add('active');
+        lockBody();
+      }
     } else {
       sidebar.classList.toggle('collapsed');
     }
@@ -36,15 +56,40 @@ function initSidebar() {
   if (mobileBtn) mobileBtn.addEventListener('click', () => {
     sidebar.classList.add('mobile-open');
     overlay.classList.add('active');
+    lockBody();
   });
   if (overlay) overlay.addEventListener('click', () => {
     sidebar.classList.remove('mobile-open');
     overlay.classList.remove('active');
+    unlockBody();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && sidebar.classList.contains('mobile-open')) {
+      sidebar.classList.remove('mobile-open');
+      overlay.classList.remove('active');
+      unlockBody();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (!isMobile() && sidebar.classList.contains('mobile-open')) {
+      sidebar.classList.remove('mobile-open');
+      overlay.classList.remove('active');
+      unlockBody();
+    }
   });
 
   document.querySelectorAll('.sidebar-link').forEach(link => {
     link.addEventListener('click', e => {
-      if (link.getAttribute('href') && link.getAttribute('href') !== '#') return;
+      if (link.getAttribute('href') && link.getAttribute('href') !== '#') {
+        if (isMobile()) {
+          sidebar.classList.remove('mobile-open');
+          overlay.classList.remove('active');
+          unlockBody();
+        }
+        return;
+      }
       e.preventDefault();
       document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
       link.classList.add('active');
@@ -485,3 +530,16 @@ function observeAndAnimate(canvas, fn) {
   obs.observe(canvas);
   window.addEventListener('resize', fn);
 }
+
+/* ===== CHART RESIZE ===== */
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    document.querySelectorAll('canvas[data-chart]').forEach(c => {
+      const event = new Event('redraw');
+      c.dispatchEvent(event);
+    });
+    initCharts();
+  }, 250);
+});

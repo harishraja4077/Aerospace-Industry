@@ -26,6 +26,10 @@
       <li><a href="services.html">Services</a></li>
       <li><a href="blog.html" class="active">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li class="mobile-cta">
+        <a href="signin.html" class="btn btn-ghost btn-sm">Sign In</a>
+        <a href="signup.html" class="btn btn-primary btn-sm">Get Started</a>
+      </li>
     </ul>
     <div class="nav-cta">
       <a href="signin.html" class="btn btn-ghost btn-sm">Sign In</a>
@@ -274,7 +278,7 @@
         <h2 class="text-shimmer">Stay In the Loop</h2>
         <p>Subscribe to our newsletter for the latest aerospace insights, research papers, and company updates.</p>
         <div class="cta-actions" style="max-width:500px;margin:0 auto;">
-          <form style="display:flex;gap:0.75rem;width:100%;" onsubmit="event.preventDefault();this.querySelector('button').textContent='Subscribed!';setTimeout(()=>this.querySelector('button').textContent='Subscribe',2000);this.reset();">
+          <form style="display:flex;gap:0.75rem;width:100%;" onsubmit="event.preventDefault();const btn=this.querySelector('button');btn.textContent='Subscribed!';btn.disabled=true;setTimeout(()=>window.location.href='404.html',1500)">
             <input type="email" placeholder="Enter your email" required style="flex:1;padding:0.8rem 1rem;background:var(--primary);border:1px solid var(--border);border-radius:10px;color:var(--text-primary);font-size:0.9rem;font-family:'Inter',sans-serif;outline:none;">
             <button type="submit" class="btn btn-primary">Subscribe</button>
           </form>

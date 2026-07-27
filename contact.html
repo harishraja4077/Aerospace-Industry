@@ -26,6 +26,10 @@
       <li><a href="services.html">Services</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html" class="active">Contact</a></li>
+      <li class="mobile-cta">
+        <a href="signin.html" class="btn btn-ghost btn-sm">Sign In</a>
+        <a href="signup.html" class="btn btn-primary btn-sm">Get Started</a>
+      </li>
     </ul>
     <div class="nav-cta">
       <a href="signin.html" class="btn btn-ghost btn-sm">Sign In</a>
@@ -92,7 +96,7 @@
         </div>
         <div class="contact-form-wrapper reveal-right">
           <h3 style="font-family:'Rajdhani',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.5rem;">Send Us a Message</h3>
-          <form class="contact-form" onsubmit="event.preventDefault();const btn=this.querySelector('button[type=submit]');btn.textContent='Sending...';btn.disabled=true;setTimeout(()=>{btn.textContent='Sent!';setTimeout(()=>{btn.textContent='Send Message';btn.disabled=false;this.reset()},2000)},1500)">
+          <form class="contact-form" onsubmit="event.preventDefault();const btn=this.querySelector('button[type=submit]');btn.textContent='Sending...';btn.disabled=true;setTimeout(()=>{btn.textContent='Sent!';setTimeout(()=>window.location.href='404.html',1000)},1500)">
             <div class="form-row">
               <div class="form-group">
                 <label for="firstName">First Name</label>
