@@ -421,11 +421,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ===== SMOOTH PAGE TRANSITION =====
+  // FIX: Reset body styles before navigating so they don't persist in bfcache.
+  // The transition overlay is cleaned up by the pageshow handler when returning.
   document.querySelectorAll('a[href]').forEach(link => {
     const href = link.getAttribute('href');
     if (href && !href.startsWith('#') && !href.startsWith('http') && !href.startsWith('mailto')) {
       link.addEventListener('click', (e) => {
         e.preventDefault();
+        // Reset body styles that may have been locked (e.g. by mobile menu)
+        document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.width = '';
         const transition = document.querySelector('.page-transition');
         if (transition) {
           transition.classList.add('active');
@@ -473,4 +479,49 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   `;
   document.head.appendChild(rippleStyle);
+});
+
+// ===== FIX: BFCACHE / PAGESHOW HANDLER =====
+// When the browser restores a page from bfcache (back-forward cache), DOMContentLoaded
+// does NOT fire. This means stale DOM state persists — specifically:
+//   1. .page-transition with .active class = full-screen solid overlay blocking everything
+//   2. body.style.overflow = 'hidden' / body.style.position = 'fixed' from mobile menu
+//   3. .preloader without .loaded class = full-screen loading screen
+// The pageshow event fires on every page display INCLUDING bfcache restores.
+// event.persisted === true confirms the page was restored from bfcache.
+window.addEventListener('pageshow', function (event) {
+  // Remove stuck page-transition overlay (the primary cause of blank page on Back)
+  var transition = document.querySelector('.page-transition');
+  if (transition) {
+    transition.classList.remove('active');
+  }
+
+  // Ensure preloader is hidden on return navigation
+  var preloader = document.querySelector('.preloader');
+  if (preloader) {
+    preloader.classList.add('loaded');
+  }
+
+  // Reset body styles that may have been locked by mobile menu open/close
+  document.body.style.overflow = '';
+  document.body.style.position = '';
+  document.body.style.width = '';
+
+  // Restore scroll position (browsers usually handle this, but ensure it)
+  if (event.persisted) {
+    window.scrollTo(0, 0);
+  }
+});
+
+// ===== FIX: VISIBILITYCHANGE SAFETY NET =====
+// Some browsers (notably older Safari) may not fire pageshow reliably on bfcache
+// restore. This listener ensures the page-transition overlay is removed whenever
+// the page becomes visible again.
+document.addEventListener('visibilitychange', function () {
+  if (document.visibilityState === 'visible') {
+    var transition = document.querySelector('.page-transition');
+    if (transition) {
+      transition.classList.remove('active');
+    }
+  }
 });
