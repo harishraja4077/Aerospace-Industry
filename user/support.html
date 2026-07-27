@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly - Support</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="../index.html" class="sidebar-logo"><img src="../images/logo.webp" alt="STACKLY" class="sidebar-logo-img"></a>
+      <button class="sidebar-toggle" id="sidebarToggle"><i class="fas fa-chevron-left"></i></button>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">Main</div>
+      <a href="user-dashboard.html" class="sidebar-link"><i class="fas fa-grid-2"></i><span>Dashboard</span></a>
+      <a href="my-aircraft.html" class="sidebar-link"><i class="fas fa-plane"></i><span>My Aircraft</span></a>
+      <a href="maintenance-status.html" class="sidebar-link"><i class="fas fa-wrench"></i><span>Maintenance Status</span></a>
+      <div class="sidebar-section">Resources</div>
+      <a href="documents.html" class="sidebar-link"><i class="fas fa-folder-open"></i><span>Documents</span></a>
+      <a href="support.html" class="sidebar-link active"><i class="fas fa-headset"></i><span>Support</span></a>
+      <a href="profile.html" class="sidebar-link"><i class="fas fa-user"></i><span>Profile</span></a>
+      <div class="sidebar-divider"></div>
+      <a href="../index.html" class="sidebar-link"><i class="fas fa-arrow-left"></i><span>Back to Site</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">JD</div>
+        <div class="sidebar-user-info"><span class="sidebar-user-name">James Davidson</span><span class="sidebar-user-role">Fleet Operator</span></div>
+      </div>
+    </div>
+  </aside>
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+      <div class="topbar-breadcrumb"><span class="breadcrumb-home"><i class="fas fa-grid-2"></i></span><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Support</span></div>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-search"><i class="fas fa-search"></i><input type="text" placeholder="Search..."></div>
+      <a href="../404.html" class="topbar-icon-btn"><i class="fas fa-bell"></i><span class="notif-badge">3</span></a>
+      <div class="topbar-divider"></div>
+      <div class="topbar-profile"><div class="topbar-avatar">JD</div><div class="topbar-profile-info"><span class="topbar-name">James Davidson</span><span class="topbar-role">Fleet Operator</span></div><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </header>
+
+  <main class="main-content" id="mainContent">
+    <div class="dashboard">
+      <div class="stats-grid">
+        <div class="stat-card glass" data-animate>
+          <div class="stat-icon" style="background:rgba(56,189,248,0.1);color:#38BDF8;"><i class="fas fa-ticket"></i></div>
+          <div class="stat-info"><span class="stat-label">Open Tickets</span><span class="stat-value" data-count="3">0</span></div>
+          <span class="stat-trend trend-neutral"><i class="fas fa-minus"></i> 0</span>
+        </div>
+        <div class="stat-card glass" data-animate>
+          <div class="stat-icon" style="background:rgba(245,158,11,0.1);color:#F59E0B;"><i class="fas fa-spinner"></i></div>
+          <div class="stat-info"><span class="stat-label">In Progress</span><span class="stat-value" data-count="2">0</span></div>
+          <span class="stat-trend trend-neutral"><i class="fas fa-minus"></i> 0</span>
+        </div>
+        <div class="stat-card glass" data-animate>
+          <div class="stat-icon" style="background:rgba(34,197,94,0.1);color:#22C55E;"><i class="fas fa-check-double"></i></div>
+          <div class="stat-info"><span class="stat-label">Resolved This Month</span><span class="stat-value" data-count="8">0</span></div>
+          <span class="stat-trend trend-up"><i class="fas fa-arrow-up"></i> +3</span>
+        </div>
+        <div class="stat-card glass" data-animate>
+          <div class="stat-icon" style="background:rgba(6,182,212,0.1);color:#06B6D4;"><i class="fas fa-clock"></i></div>
+          <div class="stat-info"><span class="stat-label">Avg Response (hrs)</span><span class="stat-value" data-count="2.4">0</span></div>
+          <span class="stat-trend trend-down"><i class="fas fa-arrow-down"></i> -0.8</span>
+        </div>
+      </div>
+
+      <div class="charts-grid-equal">
+        <div class="chart-card glass" data-animate>
+          <div class="chart-header"><h3 class="chart-title">Tickets by Priority</h3></div>
+          <div class="chart-body"><canvas data-chart="bar" data-labels='["Critical","High","Medium","Low"]' data-values='[2,4,8,5]' data-color="#A855F7"></canvas></div>
+        </div>
+        <div class="chart-card glass" data-animate>
+          <div class="chart-header"><h3 class="chart-title">Resolution Trend</h3></div>
+          <div class="chart-body"><canvas data-chart="line" data-labels='["W1","W2","W3","W4","W5","W6"]' data-datasets='[{"values":[5,7,6,8,9,11],"color":"#22C55E","label":"Resolved"},{"values":[3,4,5,3,4,2],"color":"#EF4444","label":"Opened"}]'></canvas></div>
+        </div>
+      </div>
+
+      <div class="bottom-grid-1">
+        <div class="chart-card glass" data-animate>
+          <div class="chart-header"><h3 class="chart-title">Recent Tickets</h3><div class="chart-actions"><a href="../404.html" class="btn btn-sm btn-primary"><i class="fas fa-plus"></i> New Ticket</a></div></div>
+          <div class="ticket-list">
+            <div class="ticket-item">
+              <div class="ticket-priority high"></div>
+              <div class="ticket-info"><h4>B787 Engine Vibration Alert</h4><p>Unusual vibration readings detected on engine #2 during last flight cycle. Requires immediate inspection.</p></div>
+              <div class="ticket-meta"><span class="ticket-date">Jul 22, 2026</span><span class="status-badge status-active">Open</span></div>
+            </div>
+            <div class="ticket-item">
+              <div class="ticket-priority medium"></div>
+              <div class="ticket-info"><h4>Avionics Display Calibration</h4><p>PFD showing slight deviation on A350-900. Needs recalibration before next long-haul flight.</p></div>
+              <div class="ticket-meta"><span class="ticket-date">Jul 20, 2026</span><span class="status-badge status-pending">In Progress</span></div>
+            </div>
+            <div class="ticket-item">
+              <div class="ticket-priority low"></div>
+              <div class="ticket-info"><h4>Cabin Lighting Request</h4><p>Request to upgrade mood lighting system on B737 MAX fleet to LED configuration.</p></div>
+              <div class="ticket-meta"><span class="ticket-date">Jul 18, 2026</span><span class="status-badge status-pending">In Progress</span></div>
+            </div>
+            <div class="ticket-item">
+              <div class="ticket-priority high"></div>
+              <div class="ticket-info"><h4>Hydraulic Fluid Leak - A320neo</h4><p>Minor hydraulic fluid leak observed near landing gear bay. Grounded pending inspection.</p></div>
+              <div class="ticket-meta"><span class="ticket-date">Jul 15, 2026</span><span class="status-badge status-active">Open</span></div>
+            </div>
+            <div class="ticket-item">
+              <div class="ticket-priority medium"></div>
+              <div class="ticket-info"><h4>Documentation Access Issue</h4><p>Unable to access revised maintenance手册 on the portal. Getting permission denied error.</p></div>
+              <div class="ticket-meta"><span class="ticket-date">Jul 12, 2026</span><span class="status-badge status-draft">Open</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

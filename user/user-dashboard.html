@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly - User Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="../index.html" class="sidebar-logo"><img src="../images/logo.webp" alt="STACKLY" class="sidebar-logo-img"></a>
+      <button class="sidebar-toggle" id="sidebarToggle"><i class="fas fa-chevron-left"></i></button>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">Main</div>
+      <a href="user-dashboard.html" class="sidebar-link active"><i class="fas fa-grid-2"></i><span>Dashboard</span></a>
+      <a href="my-aircraft.html" class="sidebar-link"><i class="fas fa-plane"></i><span>My Aircraft</span></a>
+      <a href="maintenance-status.html" class="sidebar-link"><i class="fas fa-wrench"></i><span>Maintenance Status</span></a>
+      <div class="sidebar-section">Resources</div>
+      <a href="documents.html" class="sidebar-link"><i class="fas fa-folder-open"></i><span>Documents</span></a>
+      <a href="support.html" class="sidebar-link"><i class="fas fa-headset"></i><span>Support</span></a>
+      <a href="profile.html" class="sidebar-link"><i class="fas fa-user"></i><span>Profile</span></a>
+      <div class="sidebar-divider"></div>
+      <a href="../index.html" class="sidebar-link"><i class="fas fa-arrow-left"></i><span>Back to Site</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">JD</div>
+        <div class="sidebar-user-info"><span class="sidebar-user-name">James Davidson</span><span class="sidebar-user-role">Fleet Operator</span></div>
+      </div>
+    </div>
+  </aside>
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+      <div class="topbar-breadcrumb"><span class="breadcrumb-home"><i class="fas fa-grid-2"></i></span><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Dashboard</span></div>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-search"><i class="fas fa-search"></i><input type="text" placeholder="Search..."></div>
+      <a href="../404.html" class="topbar-icon-btn"><i class="fas fa-bell"></i><span class="notif-badge">3</span></a>
+      <div class="topbar-divider"></div>
+      <div class="topbar-profile"><div class="topbar-avatar">JD</div><div class="topbar-profile-info"><span class="topbar-name">James Davidson</span><span class="topbar-role">Fleet Operator</span></div><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </header>
+
+  <main class="main-content" id="mainContent">
+    <div class="dashboard">
+      <div class="stats-grid">
+        <div class="stat-card glass" data-animate>
+          <div class="stat-icon" style="background:rgba(34,197,94,0.1);color:#22C55E;"><i class="fas fa-plane"></i></div>
+          <div class="stat-info"><span class="stat-label">My Aircraft</span><span class="stat-value" data-count="4">0</span></div>
+          <span class="stat-trend trend-neutral"><i class="fas fa-minus"></i> 0</span>
+        </div>
+        <div class="stat-card glass" data-animate>
+          <div class="stat-icon" style="background:rgba(245,158,11,0.1);color:#F59E0B;"><i class="fas fa-wrench"></i></div>
+          <div class="stat-info"><span class="stat-label">Scheduled Maintenance</span><span class="stat-value" data-count="2">0</span></div>
+          <span class="stat-trend trend-down"><i class="fas fa-arrow-down"></i> -1</span>
+        </div>
+        <div class="stat-card glass" data-animate>
+          <div class="stat-icon" style="background:rgba(56,189,248,0.1);color:#38BDF8;"><i class="fas fa-file-lines"></i></div>
+          <div class="stat-info"><span class="stat-label">Open Documents</span><span class="stat-value" data-count="12">0</span></div>
+          <span class="stat-trend trend-up"><i class="fas fa-arrow-up"></i> +3</span>
+        </div>
+        <div class="stat-card glass" data-animate>
+          <div class="stat-icon" style="background:rgba(168,85,247,0.1);color:#A855F7;"><i class="fas fa-headset"></i></div>
+          <div class="stat-info"><span class="stat-label">Support Tickets</span><span class="stat-value" data-count="3">0</span></div>
+          <span class="stat-trend trend-up"><i class="fas fa-arrow-up"></i> +1</span>
+        </div>
+      </div>
+
+      <div class="charts-grid">
+        <div class="chart-card glass" data-animate>
+          <div class="chart-header"><h3 class="chart-title">Flight Hours</h3><div class="chart-actions"><a href="../404.html" class="chart-filter-btn active">Monthly</a></div></div>
+          <div class="chart-body"><canvas data-chart="area" data-labels='["Jan","Feb","Mar","Apr","May","Jun","Jul"]' data-datasets='[{"values":[42,48,55,51,62,68,74],"color":"#38BDF8","label":"Hours"}]'></canvas></div>
+        </div>
+        <div class="chart-card glass" data-animate>
+          <div class="chart-header"><h3 class="chart-title">Maintenance Cost</h3></div>
+          <div class="chart-body"><canvas data-chart="bar" data-labels='["Q1","Q2","Q3","Q4"]' data-values='[12000,15000,11000,18000]' data-color="#06B6D4"></canvas></div>
+        </div>
+      </div>
+
+      <div class="bottom-grid">
+        <div class="chart-card glass" data-animate>
+          <div class="chart-header"><h3 class="chart-title">Upcoming Maintenance</h3><div class="chart-actions"><a href="../404.html" class="btn btn-sm btn-outline">View All</a></div></div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead><tr><th>Aircraft</th><th>Type</th><th>Scheduled</th><th>Priority</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>B787-9 (N789SA)</td><td>Engine Inspection</td><td>Jul 28, 2026</td><td><span class="priority-badge priority-high">High</span></td><td><span class="status-badge status-pending">Scheduled</span></td></tr>
+                <tr><td>A350-900 (A35F01)</td><td>Avionics Check</td><td>Aug 02, 2026</td><td><span class="priority-badge priority-medium">Medium</span></td><td><span class="status-badge status-pending">Scheduled</span></td></tr>
+                <tr><td>B737 MAX (B7M201)</td><td>Airframe Wash</td><td>Aug 10, 2026</td><td><span class="priority-badge priority-low">Low</span></td><td><span class="status-badge status-draft">Draft</span></td></tr>
+                <tr><td>A320neo (A32N05)</td><td>Landing Gear</td><td>Aug 15, 2026</td><td><span class="priority-badge priority-high">High</span></td><td><span class="status-badge status-pending">Scheduled</span></td></tr>
+                <tr><td>B787-9 (N789SA)</td><td>Cabin Refurb</td><td>Sep 01, 2026</td><td><span class="priority-badge priority-low">Low</span></td><td><span class="status-badge status-draft">Draft</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="chart-card glass" data-animate>
+          <div class="chart-header"><h3 class="chart-title">Recent Activity</h3></div>
+          <div class="activity-card">
+            <div class="activity-item">
+              <div class="activity-icon" style="background:rgba(34,197,94,0.1);color:#22C55E;"><i class="fas fa-check"></i></div>
+              <div class="activity-info"><p>Engine inspection completed on B787-9</p><span class="activity-time">2 hours ago</span></div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon" style="background:rgba(56,189,248,0.1);color:#38BDF8;"><i class="fas fa-file"></i></div>
+              <div class="activity-info"><p>New maintenance document uploaded</p><span class="activity-time">5 hours ago</span></div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon" style="background:rgba(245,158,11,0.1);color:#F59E0B;"><i class="fas fa-wrench"></i></div>
+              <div class="activity-info"><p>Scheduled maintenance reminder: A350-900</p><span class="activity-time">1 day ago</span></div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon" style="background:rgba(168,85,247,0.1);color:#A855F7;"><i class="fas fa-headset"></i></div>
+              <div class="activity-info"><p>Support ticket #TK-2847 resolved</p><span class="activity-time">2 days ago</span></div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon" style="background:rgba(6,182,212,0.1);color:#06B6D4;"><i class="fas fa-plane"></i></div>
+              <div class="activity-info"><p>Flight hours updated for B737 MAX</p><span class="activity-time">3 days ago</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

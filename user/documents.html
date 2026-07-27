@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly - Documents</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="../index.html" class="sidebar-logo"><img src="../images/logo.webp" alt="STACKLY" class="sidebar-logo-img"></a>
+      <button class="sidebar-toggle" id="sidebarToggle"><i class="fas fa-chevron-left"></i></button>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">Main</div>
+      <a href="user-dashboard.html" class="sidebar-link"><i class="fas fa-grid-2"></i><span>Dashboard</span></a>
+      <a href="my-aircraft.html" class="sidebar-link"><i class="fas fa-plane"></i><span>My Aircraft</span></a>
+      <a href="maintenance-status.html" class="sidebar-link"><i class="fas fa-wrench"></i><span>Maintenance Status</span></a>
+      <div class="sidebar-section">Resources</div>
+      <a href="documents.html" class="sidebar-link active"><i class="fas fa-folder-open"></i><span>Documents</span></a>
+      <a href="support.html" class="sidebar-link"><i class="fas fa-headset"></i><span>Support</span></a>
+      <a href="profile.html" class="sidebar-link"><i class="fas fa-user"></i><span>Profile</span></a>
+      <div class="sidebar-divider"></div>
+      <a href="../index.html" class="sidebar-link"><i class="fas fa-arrow-left"></i><span>Back to Site</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">JD</div>
+        <div class="sidebar-user-info"><span class="sidebar-user-name">James Davidson</span><span class="sidebar-user-role">Fleet Operator</span></div>
+      </div>
+    </div>
+  </aside>
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+      <div class="topbar-breadcrumb"><span class="breadcrumb-home"><i class="fas fa-grid-2"></i></span><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Documents</span></div>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-search"><i class="fas fa-search"></i><input type="text" placeholder="Search..."></div>
+      <a href="../404.html" class="topbar-icon-btn"><i class="fas fa-bell"></i><span class="notif-badge">3</span></a>
+      <div class="topbar-divider"></div>
+      <div class="topbar-profile"><div class="topbar-avatar">JD</div><div class="topbar-profile-info"><span class="topbar-name">James Davidson</span><span class="topbar-role">Fleet Operator</span></div><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </header>
+
+  <main class="main-content" id="mainContent">
+    <div class="dashboard">
+      <div class="stats-grid">
+        <div class="stat-card glass" data-animate>
+          <div class="stat-icon" style="background:rgba(56,189,248,0.1);color:#38BDF8;"><i class="fas fa-file"></i></div>
+          <div class="stat-info"><span class="stat-label">Total Documents</span><span class="stat-value" data-count="48">0</span></div>
+          <span class="stat-trend trend-up"><i class="fas fa-arrow-up"></i> +5</span>
+        </div>
+        <div class="stat-card glass" data-animate>
+          <div class="stat-icon" style="background:rgba(6,182,212,0.1);color:#06B6D4;"><i class="fas fa-book"></i></div>
+          <div class="stat-info"><span class="stat-label">Technical Manuals</span><span class="stat-value" data-count="18">0</span></div>
+          <span class="stat-trend trend-neutral"><i class="fas fa-minus"></i> 0</span>
+        </div>
+        <div class="stat-card glass" data-animate>
+          <div class="stat-icon" style="background:rgba(34,197,94,0.1);color:#22C55E;"><i class="fas fa-certificate"></i></div>
+          <div class="stat-info"><span class="stat-label">Certificates</span><span class="stat-value" data-count="15">0</span></div>
+          <span class="stat-trend trend-neutral"><i class="fas fa-minus"></i> 0</span>
+        </div>
+        <div class="stat-card glass" data-animate>
+          <div class="stat-icon" style="background:rgba(245,158,11,0.1);color:#F59E0B;"><i class="fas fa-clock"></i></div>
+          <div class="stat-info"><span class="stat-label">Expiring Soon</span><span class="stat-value" data-count="5">0</span></div>
+          <span class="stat-trend trend-down"><i class="fas fa-arrow-down"></i> -2</span>
+        </div>
+      </div>
+
+      <div class="bottom-grid-1">
+        <div class="chart-card glass" data-animate>
+          <div class="chart-header"><h3 class="chart-title">All Documents</h3><div class="chart-actions"><a href="../404.html" class="btn btn-sm btn-primary"><i class="fas fa-upload"></i> Upload</a></div></div>
+          <div class="doc-list">
+            <div class="doc-item">
+              <div class="doc-icon pdf"><i class="fas fa-file-pdf"></i></div>
+              <div class="doc-info"><h4>A350 Maintenance Manual v4.2</h4><span>PDF &middot; 2.4 MB &middot; Updated Jul 15, 2026</span></div>
+              <div class="doc-actions"><a href="../404.html" class="btn btn-sm btn-outline"><i class="fas fa-download"></i></a></div>
+            </div>
+            <div class="doc-item">
+              <div class="doc-icon doc"><i class="fas fa-file-word"></i></div>
+              <div class="doc-info"><h4>Flight Operations Guide 2026</h4><span>DOCX &middot; 1.8 MB &middot; Updated Jun 28, 2026</span></div>
+              <div class="doc-actions"><a href="../404.html" class="btn btn-sm btn-outline"><i class="fas fa-download"></i></a></div>
+            </div>
+            <div class="doc-item">
+              <div class="doc-icon pdf"><i class="fas fa-file-pdf"></i></div>
+              <div class="doc-info"><h4>Safety Certificate 2026</h4><span>PDF &middot; 540 KB &middot; Issued Jan 10, 2026</span></div>
+              <div class="doc-actions"><a href="../404.html" class="btn btn-sm btn-outline"><i class="fas fa-download"></i></a></div>
+            </div>
+            <div class="doc-item">
+              <div class="doc-icon pdf"><i class="fas fa-file-pdf"></i></div>
+              <div class="doc-info"><h4>Engine Inspection Report Q2</h4><span>PDF &middot; 3.1 MB &middot; Generated Jul 05, 2026</span></div>
+              <div class="doc-actions"><a href="../404.html" class="btn btn-sm btn-outline"><i class="fas fa-download"></i></a></div>
+            </div>
+            <div class="doc-item">
+              <div class="doc-icon xls"><i class="fas fa-file-excel"></i></div>
+              <div class="doc-info"><h4>Fleet Utilization Report Q2</h4><span>XLSX &middot; 890 KB &middot; Generated Jul 01, 2026</span></div>
+              <div class="doc-actions"><a href="../404.html" class="btn btn-sm btn-outline"><i class="fas fa-download"></i></a></div>
+            </div>
+            <div class="doc-item">
+              <div class="doc-icon pdf"><i class="fas fa-file-pdf"></i></div>
+              <div class="doc-info"><h4>Compliance Documentation Pack</h4><span>PDF &middot; 4.7 MB &middot; Updated Jun 15, 2026</span></div>
+              <div class="doc-actions"><a href="../404.html" class="btn btn-sm btn-outline"><i class="fas fa-download"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

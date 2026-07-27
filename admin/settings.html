@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings - STACKLY Aerospace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo"><a href="../index.html"><img src="../images/logo.webp" alt="STACKLY" class="sidebar-logo-img"></a></div>
+      <button class="sidebar-toggle" id="sidebarToggle"><i class="fas fa-chevron-left"></i></button>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">Main</div>
+      <a href="admin-dashboard.html" class="sidebar-link"><i class="fas fa-grid-2"></i><span>Dashboard</span></a>
+      <a href="fleet-management.html" class="sidebar-link"><i class="fas fa-jet-fighter-up"></i><span>Fleet Management</span></a>
+      <a href="production.html" class="sidebar-link"><i class="fas fa-industry"></i><span>Production</span></a>
+      <a href="maintenance.html" class="sidebar-link"><i class="fas fa-wrench"></i><span>Maintenance</span></a>
+      <div class="sidebar-section">Analytics</div>
+      <a href="reports.html" class="sidebar-link"><i class="fas fa-chart-mixed"></i><span>Reports</span></a>
+      <a href="settings.html" class="sidebar-link active"><i class="fas fa-gear"></i><span>Settings</span></a>
+      <div class="sidebar-divider"></div>
+      <a href="../index.html" class="sidebar-link"><i class="fas fa-arrow-left"></i><span>Back to Site</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">AD</div>
+        <div class="sidebar-user-info"><span class="sidebar-user-name">Admin User</span><span class="sidebar-user-role">System Admin</span></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content" id="mainContent">
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        <div class="topbar-breadcrumb"><span class="breadcrumb-home"><i class="fas fa-grid-2"></i></span><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Settings</span></div>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-search"><i class="fas fa-search"></i><input type="text" placeholder="Search..."></div>
+        <a href="../404.html" class="topbar-icon-btn"><i class="fas fa-bell"></i><span class="notif-badge">5</span></a>
+        <a href="../404.html" class="topbar-icon-btn"><i class="fas fa-envelope"></i><span class="notif-badge">3</span></a>
+        <div class="topbar-divider"></div>
+        <div class="topbar-profile"><div class="topbar-avatar">AD</div><div class="topbar-profile-info"><span class="topbar-name">Admin User</span><span class="topbar-role">System Admin</span></div><i class="fas fa-chevron-down"></i></div>
+      </div>
+    </header>
+
+    <div class="dashboard">
+      <div class="page-header">
+        <h2 class="page-title">System Settings</h2>
+        <div class="page-actions">
+          <a href="../404.html" class="btn btn-primary"><i class="fas fa-save"></i> Save Changes</a>
+        </div>
+      </div>
+
+      <div class="settings-grid">
+        <div class="settings-card">
+          <div class="settings-card-header">
+            <i class="fas fa-user-gear"></i>
+            <h3>General Settings</h3>
+          </div>
+          <div class="settings-card-body">
+            <div class="form-group">
+              <label>Organization Name</label>
+              <input type="text" class="form-input" value="STACKLY Aerospace Industries">
+            </div>
+            <div class="form-group">
+              <label>Default Currency</label>
+              <select class="form-select">
+                <option selected>USD - US Dollar</option>
+                <option>EUR - Euro</option>
+                <option>GBP - British Pound</option>
+                <option>AED - UAE Dirham</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Timezone</label>
+              <select class="form-select">
+                <option>UTC-05:00 Eastern Time</option>
+                <option selected>UTC+00:00 GMT</option>
+                <option>UTC+04:00 Gulf Standard</option>
+                <option>UTC+08:00 Singapore</option>
+                <option>UTC+10:00 Australian Eastern</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Date Format</label>
+              <select class="form-select">
+                <option selected>MMM DD YYYY</option>
+                <option>DD/MM/YYYY</option>
+                <option>YYYY-MM-DD</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-card">
+          <div class="settings-card-header">
+            <i class="fas fa-bell"></i>
+            <h3>Notification Preferences</h3>
+          </div>
+          <div class="settings-card-body">
+            <div class="toggle-group">
+              <div class="toggle-info">
+                <span class="toggle-label">Email Notifications</span>
+                <span class="toggle-desc">Receive alerts via email for critical events</span>
+              </div>
+              <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+            </div>
+            <div class="toggle-group">
+              <div class="toggle-info">
+                <span class="toggle-label">SMS Alerts</span>
+                <span class="toggle-desc">Get SMS for AOG situations</span>
+              </div>
+              <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+            </div>
+            <div class="toggle-group">
+              <div class="toggle-info">
+                <span class="toggle-label">Push Notifications</span>
+                <span class="toggle-desc">Browser push notifications</span>
+              </div>
+              <label class="toggle-switch"><input type="checkbox"><span class="toggle-slider"></span></label>
+            </div>
+            <div class="toggle-group">
+              <div class="toggle-info">
+                <span class="toggle-label">Weekly Digest</span>
+                <span class="toggle-desc">Summary of fleet operations every Monday</span>
+              </div>
+              <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+            </div>
+            <div class="toggle-group">
+              <div class="toggle-info">
+                <span class="toggle-label">Maintenance Reminders</span>
+                <span class="toggle-desc">Upcoming maintenance schedule alerts</span>
+              </div>
+              <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-card">
+          <div class="settings-card-header">
+            <i class="fas fa-shield-halved"></i>
+            <h3>Security</h3>
+          </div>
+          <div class="settings-card-body">
+            <div class="toggle-group">
+              <div class="toggle-info">
+                <span class="toggle-label">Two-Factor Authentication</span>
+                <span class="toggle-desc">Require 2FA for all admin accounts</span>
+              </div>
+              <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+            </div>
+            <div class="toggle-group">
+              <div class="toggle-info">
+                <span class="toggle-label">Session Timeout</span>
+                <span class="toggle-desc">Auto-logout after inactivity</span>
+              </div>
+              <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+            </div>
+            <div class="form-group">
+              <label>Session Duration (minutes)</label>
+              <input type="number" class="form-input" value="30" min="5" max="120">
+            </div>
+            <div class="form-group">
+              <label>Password Expiry (days)</label>
+              <input type="number" class="form-input" value="90" min="30" max="365">
+            </div>
+            <div class="toggle-group">
+              <div class="toggle-info">
+                <span class="toggle-label">IP Whitelisting</span>
+                <span class="toggle-desc">Restrict access to approved IP ranges</span>
+              </div>
+              <label class="toggle-switch"><input type="checkbox"><span class="toggle-slider"></span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-card">
+          <div class="settings-card-header">
+            <i class="fas fa-database"></i>
+            <h3>System Maintenance</h3>
+          </div>
+          <div class="settings-card-body">
+            <div class="form-group">
+              <label>Backup Frequency</label>
+              <select class="form-select">
+                <option>Every 6 hours</option>
+                <option selected>Every 24 hours</option>
+                <option>Weekly</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Data Retention Period</label>
+              <select class="form-select">
+                <option>6 months</option>
+                <option>1 year</option>
+                <option selected>2 years</option>
+                <option>5 years</option>
+              </select>
+            </div>
+            <div class="toggle-group">
+              <div class="toggle-info">
+                <span class="toggle-label">Auto-Update</span>
+                <span class="toggle-desc">Automatically install system updates</span>
+              </div>
+              <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+            </div>
+            <div class="settings-actions">
+              <a href="../404.html" class="btn btn-secondary"><i class="fas fa-sync"></i> Sync Data Now</a>
+              <a href="../404.html" class="btn btn-danger"><i class="fas fa-trash"></i> Clear Cache</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

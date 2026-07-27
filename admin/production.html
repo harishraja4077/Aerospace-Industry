@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Production - STACKLY Aerospace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo"><a href="../index.html"><img src="../images/logo.webp" alt="STACKLY" class="sidebar-logo-img"></a></div>
+      <button class="sidebar-toggle" id="sidebarToggle"><i class="fas fa-chevron-left"></i></button>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">Main</div>
+      <a href="admin-dashboard.html" class="sidebar-link"><i class="fas fa-grid-2"></i><span>Dashboard</span></a>
+      <a href="fleet-management.html" class="sidebar-link"><i class="fas fa-jet-fighter-up"></i><span>Fleet Management</span></a>
+      <a href="production.html" class="sidebar-link active"><i class="fas fa-industry"></i><span>Production</span></a>
+      <a href="maintenance.html" class="sidebar-link"><i class="fas fa-wrench"></i><span>Maintenance</span></a>
+      <div class="sidebar-section">Analytics</div>
+      <a href="reports.html" class="sidebar-link"><i class="fas fa-chart-mixed"></i><span>Reports</span></a>
+      <a href="settings.html" class="sidebar-link"><i class="fas fa-gear"></i><span>Settings</span></a>
+      <div class="sidebar-divider"></div>
+      <a href="../index.html" class="sidebar-link"><i class="fas fa-arrow-left"></i><span>Back to Site</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">AD</div>
+        <div class="sidebar-user-info"><span class="sidebar-user-name">Admin User</span><span class="sidebar-user-role">System Admin</span></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content" id="mainContent">
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        <div class="topbar-breadcrumb"><span class="breadcrumb-home"><i class="fas fa-grid-2"></i></span><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Production</span></div>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-search"><i class="fas fa-search"></i><input type="text" placeholder="Search..."></div>
+        <a href="../404.html" class="topbar-icon-btn"><i class="fas fa-bell"></i><span class="notif-badge">5</span></a>
+        <a href="../404.html" class="topbar-icon-btn"><i class="fas fa-envelope"></i><span class="notif-badge">3</span></a>
+        <div class="topbar-divider"></div>
+        <div class="topbar-profile"><div class="topbar-avatar">AD</div><div class="topbar-profile-info"><span class="topbar-name">Admin User</span><span class="topbar-role">System Admin</span></div><i class="fas fa-chevron-down"></i></div>
+      </div>
+    </header>
+
+    <div class="dashboard">
+      <div class="page-header">
+        <h2 class="page-title">Production Pipeline</h2>
+        <div class="page-actions">
+          <a href="../404.html" class="btn btn-secondary"><i class="fas fa-download"></i> Export</a>
+          <a href="../404.html" class="btn btn-primary"><i class="fas fa-plus"></i> New Order</a>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-blue"><i class="fas fa-file-lines"></i></div>
+          <div class="stat-info">
+            <span class="stat-value">38</span>
+            <span class="stat-label">Active Orders</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-cyan"><i class="fas fa-hammer"></i></div>
+          <div class="stat-info">
+            <span class="stat-value">14</span>
+            <span class="stat-label">In Assembly</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-green"><i class="fas fa-plane"></i></div>
+          <div class="stat-info">
+            <span class="stat-value">7</span>
+            <span class="stat-label">Completed This Month</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-orange"><i class="fas fa-clock"></i></div>
+          <div class="stat-info">
+            <span class="stat-value">96.4%</span>
+            <span class="stat-label">On-Time Delivery</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Production Orders</h3>
+          <span class="card-subtitle">38 active orders across all models</span>
+          <div class="card-actions">
+            <a href="../404.html" class="chip active">All</a>
+            <a href="../404.html" class="chip">In Progress</a>
+            <a href="../404.html" class="chip">Completed</a>
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Aircraft Model</th>
+                <th>Customer</th>
+                <th>Quantity</th>
+                <th>Progress</th>
+                <th>Delivery Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="table-id">PO-2026-041</td>
+                <td>B787-9 Dreamliner</td>
+                <td>United Airlines</td>
+                <td>12</td>
+                <td><div class="progress-bar"><div class="progress-fill" style="width:72%"></div><span class="progress-text">72%</span></div></td>
+                <td>Sep 2026</td>
+                <td><span class="status-badge active">In Assembly</span></td>
+              </tr>
+              <tr>
+                <td class="table-id">PO-2026-038</td>
+                <td>A350-900</td>
+                <td>Japan Airlines</td>
+                <td>8</td>
+                <td><div class="progress-bar"><div class="progress-fill" style="width:45%"></div><span class="progress-text">45%</span></div></td>
+                <td>Nov 2026</td>
+                <td><span class="status-badge active">In Assembly</span></td>
+              </tr>
+              <tr>
+                <td class="table-id">PO-2026-035</td>
+                <td>B737 MAX 10</td>
+                <td>Southwest Airlines</td>
+                <td>20</td>
+                <td><div class="progress-bar"><div class="progress-fill" style="width:100%"></div><span class="progress-text">100%</span></div></td>
+                <td>Jul 2026</td>
+                <td><span class="status-badge completed">Delivered</span></td>
+              </tr>
+              <tr>
+                <td class="table-id">PO-2026-033</td>
+                <td>A321XLR</td>
+                <td>Qantas</td>
+                <td>6</td>
+                <td><div class="progress-bar"><div class="progress-fill" style="width:88%"></div><span class="progress-text">88%</span></div></td>
+                <td>Aug 2026</td>
+                <td><span class="status-badge active">Final Testing</span></td>
+              </tr>
+              <tr>
+                <td class="table-id">PO-2026-030</td>
+                <td>B777-9</td>
+                <td>Emirates</td>
+                <td>15</td>
+                <td><div class="progress-bar"><div class="progress-fill" style="width:18%"></div><span class="progress-text">18%</span></div></td>
+                <td>Mar 2027</td>
+                <td><span class="status-badge scheduled">Fuselage Assembly</span></td>
+              </tr>
+              <tr>
+                <td class="table-id">PO-2026-028</td>
+                <td>A220-300</td>
+                <td>Delta Air Lines</td>
+                <td>10</td>
+                <td><div class="progress-bar"><div class="progress-fill" style="width:62%"></div><span class="progress-text">62%</span></div></td>
+                <td>Oct 2026</td>
+                <td><span class="status-badge active">In Assembly</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="charts-grid">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Monthly Deliveries</h3>
+            <span class="card-subtitle">Deliveries vs delays by month</span>
+          </div>
+          <div class="chart-body">
+            <canvas data-chart="bar" data-labels='["Jan","Feb","Mar","Apr","May","Jun","Jul"]' data-datasets='[{"values":[5,3,7,4,6,8,7],"color":"#38BDF8","label":"Deliveries"},{"values":[8,6,5,9,7,4,3],"color":"#F59E0B","label":"Delayed"}]'></canvas>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Production by Model</h3>
+            <span class="card-subtitle">Order distribution by aircraft model</span>
+          </div>
+          <div class="chart-body-donut">
+            <div class="donut-center">
+              <span class="donut-value">38</span>
+              <span class="donut-label">Active Orders</span>
+            </div>
+            <canvas data-chart="donut" data-values='[15,10,8,5]' data-labels='["Boeing 787/777","Airbus A350/A321","Boeing 737","Others"]' data-colors='["#38BDF8","#06B6D4","#F59E0B","#22C55E"]'></canvas>
+            <div class="donut-legend">
+              <div class="legend-item"><span class="legend-dot" style="background:#38BDF8"></span>Boeing 787/777 <span class="legend-value">15</span></div>
+              <div class="legend-item"><span class="legend-dot" style="background:#06B6D4"></span>Airbus A350/A321 <span class="legend-value">10</span></div>
+              <div class="legend-item"><span class="legend-dot" style="background:#F59E0B"></span>Boeing 737 <span class="legend-value">8</span></div>
+              <div class="legend-item"><span class="legend-dot" style="background:#22C55E"></span>Others <span class="legend-value">5</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

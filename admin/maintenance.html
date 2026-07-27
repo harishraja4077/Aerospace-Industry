@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maintenance - STACKLY Aerospace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo"><a href="../index.html"><img src="../images/logo.webp" alt="STACKLY" class="sidebar-logo-img"></a></div>
+      <button class="sidebar-toggle" id="sidebarToggle"><i class="fas fa-chevron-left"></i></button>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">Main</div>
+      <a href="admin-dashboard.html" class="sidebar-link"><i class="fas fa-grid-2"></i><span>Dashboard</span></a>
+      <a href="fleet-management.html" class="sidebar-link"><i class="fas fa-jet-fighter-up"></i><span>Fleet Management</span></a>
+      <a href="production.html" class="sidebar-link"><i class="fas fa-industry"></i><span>Production</span></a>
+      <a href="maintenance.html" class="sidebar-link active"><i class="fas fa-wrench"></i><span>Maintenance</span></a>
+      <div class="sidebar-section">Analytics</div>
+      <a href="reports.html" class="sidebar-link"><i class="fas fa-chart-mixed"></i><span>Reports</span></a>
+      <a href="settings.html" class="sidebar-link"><i class="fas fa-gear"></i><span>Settings</span></a>
+      <div class="sidebar-divider"></div>
+      <a href="../index.html" class="sidebar-link"><i class="fas fa-arrow-left"></i><span>Back to Site</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">AD</div>
+        <div class="sidebar-user-info"><span class="sidebar-user-name">Admin User</span><span class="sidebar-user-role">System Admin</span></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content" id="mainContent">
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        <div class="topbar-breadcrumb"><span class="breadcrumb-home"><i class="fas fa-grid-2"></i></span><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Maintenance</span></div>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-search"><i class="fas fa-search"></i><input type="text" placeholder="Search..."></div>
+        <a href="../404.html" class="topbar-icon-btn"><i class="fas fa-bell"></i><span class="notif-badge">5</span></a>
+        <a href="../404.html" class="topbar-icon-btn"><i class="fas fa-envelope"></i><span class="notif-badge">3</span></a>
+        <div class="topbar-divider"></div>
+        <div class="topbar-profile"><div class="topbar-avatar">AD</div><div class="topbar-profile-info"><span class="topbar-name">Admin User</span><span class="topbar-role">System Admin</span></div><i class="fas fa-chevron-down"></i></div>
+      </div>
+    </header>
+
+    <div class="dashboard">
+      <div class="page-header">
+        <h2 class="page-title">Maintenance Management</h2>
+        <div class="page-actions">
+          <a href="../404.html" class="btn btn-secondary"><i class="fas fa-calendar"></i> Schedule</a>
+          <a href="../404.html" class="btn btn-primary"><i class="fas fa-plus"></i> New Task</a>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-orange"><i class="fas fa-clipboard-list"></i></div>
+          <div class="stat-info">
+            <span class="stat-value">42</span>
+            <span class="stat-label">Open Work Orders</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-red"><i class="fas fa-fire"></i></div>
+          <div class="stat-info">
+            <span class="stat-value">5</span>
+            <span class="stat-label">Critical AOG</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-green"><i class="fas fa-check-double"></i></div>
+          <div class="stat-info">
+            <span class="stat-value">187</span>
+            <span class="stat-label">Completed This Month</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-blue"><i class="fas fa-clock"></i></div>
+          <div class="stat-info">
+            <span class="stat-value">4.2h</span>
+            <span class="stat-label">Avg. Turnaround</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="charts-grid">
+        <div class="card card-wide">
+          <div class="card-header">
+            <h3 class="card-title">Active Work Orders</h3>
+            <span class="card-subtitle">42 open orders</span>
+            <div class="card-actions">
+              <a href="../404.html" class="chip active">All</a>
+              <a href="../404.html" class="chip">Critical</a>
+              <a href="../404.html" class="chip">Scheduled</a>
+            </div>
+          </div>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Work Order</th>
+                  <th>Aircraft</th>
+                  <th>Type</th>
+                  <th>Priority</th>
+                  <th>Technician</th>
+                  <th>ETA</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="table-id">WO-4521</td>
+                  <td>B777-300ER (A6ECT)</td>
+                  <td>Engine Overhaul</td>
+                  <td><span class="priority-badge critical">Critical</span></td>
+                  <td>Mike Reynolds</td>
+                  <td>Jul 25 2026</td>
+                  <td><span class="status-badge active">In Progress</span></td>
+                </tr>
+                <tr>
+                  <td class="table-id">WO-4518</td>
+                  <td>A330-900neo (B-5968)</td>
+                  <td>Avionics Upgrade</td>
+                  <td><span class="priority-badge high">High</span></td>
+                  <td>Sarah Chen</td>
+                  <td>Jul 28 2026</td>
+                  <td><span class="status-badge active">In Progress</span></td>
+                </tr>
+                <tr>
+                  <td class="table-id">WO-4515</td>
+                  <td>B787-9 (N789BA)</td>
+                  <td>Routine A-Check</td>
+                  <td><span class="priority-badge medium">Medium</span></td>
+                  <td>David Park</td>
+                  <td>Jul 23 2026</td>
+                  <td><span class="status-badge scheduled">Awaiting Parts</span></td>
+                </tr>
+                <tr>
+                  <td class="table-id">WO-4512</td>
+                  <td>A380-800 (A6-EUA)</td>
+                  <td>Landing Gear</td>
+                  <td><span class="priority-badge critical">Critical</span></td>
+                  <td>James Wright</td>
+                  <td>Aug 02 2026</td>
+                  <td><span class="status-badge active">In Progress</span></td>
+                </tr>
+                <tr>
+                  <td class="table-id">WO-4510</td>
+                  <td>A350-1000 (F-WWGG)</td>
+                  <td>C-Check</td>
+                  <td><span class="priority-badge medium">Medium</span></td>
+                  <td>Anna Kowalski</td>
+                  <td>Aug 05 2026</td>
+                  <td><span class="status-badge scheduled">Scheduled</span></td>
+                </tr>
+                <tr>
+                  <td class="table-id">WO-4507</td>
+                  <td>B737 MAX 8 (N378BA)</td>
+                  <td>Structural Repair</td>
+                  <td><span class="priority-badge high">High</span></td>
+                  <td>Tom Martinez</td>
+                  <td>Jul 26 2026</td>
+                  <td><span class="status-badge active">In Progress</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Tasks by Type</h3>
+            <span class="card-subtitle">Distribution by category</span>
+          </div>
+          <div class="chart-body-donut">
+            <div class="donut-center">
+              <span class="donut-value">42</span>
+              <span class="donut-label">Open Orders</span>
+            </div>
+            <canvas data-chart="donut" data-values='[45,25,20,10]' data-labels='["Routine","Overhaul","Repair","Inspection"]' data-colors='["#38BDF8","#06B6D4","#F59E0B","#22C55E"]'></canvas>
+            <div class="donut-legend">
+              <div class="legend-item"><span class="legend-dot" style="background:#38BDF8"></span>Routine <span class="legend-value">45%</span></div>
+              <div class="legend-item"><span class="legend-dot" style="background:#06B6D4"></span>Overhaul <span class="legend-value">25%</span></div>
+              <div class="legend-item"><span class="legend-dot" style="background:#F59E0B"></span>Repair <span class="legend-value">20%</span></div>
+              <div class="legend-item"><span class="legend-dot" style="background:#22C55E"></span>Inspection <span class="legend-value">10%</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Maintenance Timeline</h3>
+          <span class="card-subtitle">Weekly overview</span>
+        </div>
+        <div class="chart-body">
+          <canvas data-chart="bar" data-labels='["Week 28","Week 29","Week 30","Week 31","Week 32","Week 33"]' data-datasets='[{"values":[12,18,15,22,10,8],"color":"#38BDF8","label":"Scheduled"},{"values":[3,5,2,4,6,1],"color":"#EF4444","label":"AOG"}]'></canvas>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly - Aerospace Innovation & Space Technology</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div class="preloader">
+    <div class="preloader-logo">STACKLY</div>
+    <div class="preloader-bar"></div>
+  </div>
+
+  <div class="cursor-glow"></div>
+  <canvas id="particles-canvas"></canvas>
+  <div class="page-transition"></div>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.webp" alt="Stackly">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="signin.html" class="btn btn-ghost btn-sm">Sign In</a>
+      <a href="signup.html" class="btn btn-primary btn-sm">Get Started</a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- SECTION 1: HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-bg-gradient"></div>
+      <div class="hero-bg-gradient"></div>
+      <div class="hero-bg-gradient"></div>
+      <div class="hero-grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge reveal">
+          <span class="dot"></span> Pioneering the Future of Aerospace
+        </div>
+        <h1 class="hero-title reveal stagger-1">
+          <span class="line">Next-Gen</span>
+          <span class="line"><span class="gradient-text typing-text" data-words='["Aerospace Solutions","Space Technology","Flight Innovation","Orbital Systems"]'></span><span style="border-right: 3px solid var(--accent); animation: blink-caret 0.75s step-end infinite;">&nbsp;</span></span>
+          <span class="line">for Humanity</span>
+        </h1>
+        <p class="hero-description reveal stagger-2">
+          Redefining the boundaries of flight and space exploration through cutting-edge engineering, advanced materials, and revolutionary propulsion systems.
+        </p>
+        <div class="hero-actions reveal stagger-3">
+          <a href="404.html" class="btn btn-primary btn-lg">Explore Solutions</a>
+          <a href="404.html" class="btn btn-secondary btn-lg">Our Story <i class="fas fa-play"></i></a>
+        </div>
+        <div class="hero-stats reveal stagger-4">
+          <div class="hero-stat">
+            <div class="hero-stat-number" data-count="500" data-suffix="+">0</div>
+            <div class="hero-stat-label">Missions Completed</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number" data-count="99.7" data-suffix="%">0</div>
+            <div class="hero-stat-label">Success Rate</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number" data-count="35" data-suffix="+">0</div>
+            <div class="hero-stat-label">Years of Excellence</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual reveal-right stagger-2">
+        <div class="hero-rocket">
+          <div class="hero-orbit"></div>
+          <div class="hero-orbit hero-orbit-2"></div>
+          <svg viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="rocketGrad" x1="200" y1="0" x2="200" y2="500" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#00d4ff"/>
+                <stop offset="100%" stop-color="#7b2ff7"/>
+              </linearGradient>
+              <filter id="glow"><feGaussianBlur stdDeviation="8" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <!-- Rocket Body -->
+            <path d="M200 40 L260 200 L270 350 L250 400 L200 420 L150 400 L130 350 L140 200 Z" fill="url(#rocketGrad)" opacity="0.9" filter="url(#glow)"/>
+            <!-- Rocket Window -->
+            <circle cx="200" cy="180" r="30" fill="#0a1628" stroke="#00d4ff" stroke-width="2"/>
+            <circle cx="200" cy="180" r="20" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.5"/>
+            <!-- Fins -->
+            <path d="M130 320 L80 400 L130 380 Z" fill="#7b2ff7" opacity="0.8"/>
+            <path d="M270 320 L320 400 L270 380 Z" fill="#7b2ff7" opacity="0.8"/>
+            <!-- Flame -->
+            <ellipse cx="200" cy="450" rx="40" ry="50" fill="#00d4ff" opacity="0.3">
+              <animate attributeName="ry" values="50;70;50" dur="0.5s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.3;0.5;0.3" dur="0.5s" repeatCount="indefinite"/>
+            </ellipse>
+            <ellipse cx="200" cy="440" rx="25" ry="35" fill="#7b2ff7" opacity="0.4">
+              <animate attributeName="ry" values="35;50;35" dur="0.4s" repeatCount="indefinite"/>
+            </ellipse>
+            <ellipse cx="200" cy="435" rx="12" ry="20" fill="#fff" opacity="0.6">
+              <animate attributeName="ry" values="20;30;20" dur="0.3s" repeatCount="indefinite"/>
+            </ellipse>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrapper reveal-left">
+          <img src="images/hero-rocket-launch.webp" alt="Aerospace Engineering" style="width:100%;height:100%;object-fit:cover;">
+          <div class="about-image-overlay"></div>
+          <div class="about-image-badge">
+            <div class="badge-number">35+</div>
+            <div class="badge-text">Years of Aerospace<br>Excellence</div>
+          </div>
+        </div>
+        <div class="about-content reveal-right">
+          <div class="section-badge"><i class="fas fa-rocket"></i> About Stackly</div>
+          <h2 class="section-title">Pioneering <span>Aerospace</span> Innovation Since 1991</h2>
+          <p class="section-subtitle">
+            Stackly stands at the forefront of aerospace engineering, delivering transformative solutions that push the boundaries of what's possible in flight and space exploration.
+          </p>
+          <div class="about-features">
+            <div class="about-feature reveal stagger-1">
+              <div class="about-feature-icon"><i class="fas fa-satellite"></i></div>
+              <div>
+                <h4>Orbital Systems</h4>
+                <p>Advanced satellite deployment and orbital mechanics engineering for commercial and defense applications.</p>
+              </div>
+            </div>
+            <div class="about-feature reveal stagger-2">
+              <div class="about-feature-icon"><i class="fas fa-jet-fighter-up"></i></div>
+              <div>
+                <h4>Advanced Propulsion</h4>
+                <p>Revolutionary propulsion technologies achieving unprecedented efficiency and thrust-to-weight ratios.</p>
+              </div>
+            </div>
+            <div class="about-feature reveal stagger-3">
+              <div class="about-feature-icon"><i class="fas fa-shield-halved"></i></div>
+              <div>
+                <h4>Mission Assurance</h4>
+                <p>Rigorous testing and quality protocols ensuring 99.7% mission success across all operations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: SERVICES -->
+  <section class="section" id="services" style="background:var(--primary-light);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge reveal"><i class="fas fa-cogs"></i> Our Capabilities</div>
+        <h2 class="section-title reveal stagger-1">Comprehensive <span>Aerospace</span> Solutions</h2>
+        <p class="section-subtitle reveal stagger-2">From concept to launch, we provide end-to-end aerospace engineering services that exceed industry standards.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal stagger-1 tilt">
+          <div class="service-icon"><i class="fas fa-rocket"></i></div>
+          <h3>Launch Vehicle Design</h3>
+          <p>Custom launch vehicle architecture from conceptual design through flight qualification and operational support.</p>
+           <a href="404.html" class="learn-more">Learn More</a>
+        </div>
+        <div class="service-card reveal stagger-2 tilt">
+          <div class="service-icon"><i class="fas fa-satellite"></i></div>
+          <h3>Satellite Systems</h3>
+          <p>End-to-end satellite design, manufacturing, integration, and on-orbit commissioning services.</p>
+           <a href="404.html" class="learn-more">Learn More</a>
+        </div>
+        <div class="service-card reveal stagger-3 tilt">
+          <div class="service-icon"><i class="fas fa-plane"></i></div>
+          <h3>Avionics Engineering</h3>
+          <p>State-of-the-art avionics suites including flight management, navigation, and communication systems.</p>
+           <a href="404.html" class="learn-more">Learn More</a>
+        </div>
+        <div class="service-card reveal stagger-4 tilt">
+          <div class="service-icon"><i class="fas fa-compass"></i></div>
+          <h3>Guidance & Navigation</h3>
+          <p>Precision guidance algorithms and inertial navigation systems for all flight regimes and mission profiles.</p>
+           <a href="404.html" class="learn-more">Learn More</a>
+        </div>
+        <div class="service-card reveal stagger-5 tilt">
+          <div class="service-icon"><i class="fas fa-flask"></i></div>
+          <h3>Materials Research</h3>
+          <p>Advanced composite materials and thermal protection systems for extreme aerospace environments.</p>
+           <a href="404.html" class="learn-more">Learn More</a>
+        </div>
+        <div class="service-card reveal stagger-6 tilt">
+          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Mission Analytics</h3>
+          <p>Real-time telemetry analysis, predictive modeling, and AI-driven mission optimization platforms.</p>
+           <a href="404.html" class="learn-more">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: TECHNOLOGY -->
+  <section class="section" id="technology">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge reveal"><i class="fas fa-microchip"></i> Our Technology</div>
+        <h2 class="section-title reveal stagger-1">Cutting-Edge <span>Engineering</span></h2>
+        <p class="section-subtitle reveal stagger-2">Leveraging breakthrough technologies to solve the most complex aerospace challenges of our time.</p>
+      </div>
+      <div class="tech-showcase">
+        <div class="tech-card reveal stagger-1">
+          <div class="tech-number">01</div>
+          <div>
+            <h3>Ion Propulsion Systems</h3>
+            <p>High-efficiency ion thrusters delivering continuous low-thrust propulsion for deep space missions, achieving specific impulses exceeding 10,000 seconds.</p>
+          </div>
+        </div>
+        <div class="tech-card reveal stagger-2">
+          <div class="tech-number">02</div>
+          <div>
+            <h3>Autonomous Flight Control</h3>
+            <p>AI-powered flight management systems with real-time decision-making capabilities for autonomous operations in contested environments.</p>
+          </div>
+        </div>
+        <div class="tech-card reveal stagger-3">
+          <div class="tech-number">03</div>
+          <div>
+            <h3>Thermal Protection</h3>
+            <p>Next-generation ceramic matrix composites and ablative materials designed to withstand extreme re-entry temperatures exceeding 3,000&deg;C.</p>
+          </div>
+        </div>
+        <div class="tech-card reveal stagger-4">
+          <div class="tech-number">04</div>
+          <div>
+            <h3>Quantum Communication</h3>
+            <p>Secure quantum-encrypted satellite communication channels enabling unhackable data transmission for defense and intelligence operations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4B: AEROSPACE GALLERY -->
+  <section class="section" id="gallery" style="background:var(--primary-light);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge reveal"><i class="fas fa-images"></i> Our World</div>
+        <h2 class="section-title reveal stagger-1">Aerospace <span>in Action</span></h2>
+        <p class="section-subtitle reveal stagger-2">A glimpse into the technology, facilities, and missions that define our work.</p>
+      </div>
+      <div class="gallery-grid reveal stagger-3">
+        <div class="gallery-item gallery-item-wide">
+          <img src="images/aerospace-engineering.webp" alt="Aerospace Engineering Facility" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Engineering</span>
+            <h4>Aerospace Engineering Lab</h4>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/fighter-jet.webp" alt="Advanced Fighter Jet" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Defense</span>
+            <h4>Next-Gen Fighter Systems</h4>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/rocket-launch-night.webp" alt="Rocket Launch at Night" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Launch</span>
+            <h4>Night Launch Operations</h4>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/space-station.webp" alt="Orbital Space Station" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Space</span>
+            <h4>Orbital Station Modules</h4>
+          </div>
+        </div>
+        <div class="gallery-item gallery-item-wide">
+          <img src="images/cockpit.webp" alt="Advanced Avionics Cockpit" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Avionics</span>
+            <h4>Next-Gen Cockpit Systems</h4>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/satellite-orbit.webp" alt="Satellite in Orbit" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Satellite</span>
+            <h4>Orbital Satellite Deployment</h4>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/lab-research.webp" alt="Materials Research Lab" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Research</span>
+            <h4>Advanced Materials Lab</h4>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/airplane-sky.webp" alt="Aircraft in Flight" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-tag">Flight</span>
+            <h4>Flight Testing Program</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: STATS -->
+  <section class="section stats-section" id="stats">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge reveal"><i class="fas fa-chart-bar"></i> Track Record</div>
+        <h2 class="section-title reveal stagger-1">Numbers That <span>Speak</span></h2>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card reveal stagger-1">
+          <div class="stat-icon"><i class="fas fa-rocket"></i></div>
+          <div class="stat-number" data-count="500" data-suffix="+">0</div>
+          <div class="stat-label">Missions Launched</div>
+        </div>
+        <div class="stat-card reveal stagger-2">
+          <div class="stat-icon"><i class="fas fa-globe"></i></div>
+          <div class="stat-number" data-count="42" data-suffix="">0</div>
+          <div class="stat-label">Countries Served</div>
+        </div>
+        <div class="stat-card reveal stagger-3">
+          <div class="stat-icon"><i class="fas fa-users"></i></div>
+          <div class="stat-number" data-count="2500" data-suffix="+">0</div>
+          <div class="stat-label">Engineers & Scientists</div>
+        </div>
+        <div class="stat-card reveal stagger-4">
+          <div class="stat-icon"><i class="fas fa-award"></i></div>
+          <div class="stat-number" data-count="150" data-suffix="+">0</div>
+          <div class="stat-label">Industry Awards</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: TESTIMONIALS -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge reveal"><i class="fas fa-quote-left"></i> Testimonials</div>
+        <h2 class="section-title reveal stagger-1">Trusted by <span>Industry Leaders</span></h2>
+        <p class="section-subtitle reveal stagger-2">Hear from our partners and clients about their experience working with Stackly.</p>
+      </div>
+      <div class="testimonials-slider">
+        <div class="testimonial-card reveal stagger-1">
+          <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testimonial-text">"Stackly's engineering team delivered our satellite constellation ahead of schedule and under budget. Their technical expertise is unmatched in the industry."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JC</div>
+            <div class="testimonial-info">
+              <h4>Dr. James Chen</h4>
+              <p>CTO, Orbital Dynamics Inc.</p>
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal stagger-2">
+          <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testimonial-text">"The propulsion system they designed exceeded our performance requirements by 30%. Stackly is our go-to partner for all next-generation launch programs."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SR</div>
+            <div class="testimonial-info">
+              <h4>Sarah Rodriguez</h4>
+              <p>VP Engineering, SpaceVenture Corp</p>
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal stagger-3">
+          <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testimonial-text">"Working with Stackly transformed our defense capabilities. Their quantum communication system provided security levels we never thought possible."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MP</div>
+            <div class="testimonial-info">
+              <h4>Col. Marcus Patel</h4>
+              <p>Director, Aerospace Defense Command</p>
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: PARTNERS -->
+  <section class="section" style="background:var(--primary-light);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge reveal"><i class="fas fa-handshake"></i> Partners</div>
+        <h2 class="section-title reveal stagger-1">Trusted <span>Worldwide</span></h2>
+      </div>
+      <div class="partners-track reveal stagger-2">
+        <div class="partner-logo"><img src="images/partner-nasa.svg" alt="NASA" height="40"></div>
+        <div class="partner-logo"><img src="images/partner-esa.svg" alt="ESA" height="40"></div>
+        <div class="partner-logo"><img src="images/partner-spacex.svg" alt="SpaceX" height="40"></div>
+        <div class="partner-logo"><img src="images/partner-lockheed.svg" alt="Lockheed Martin" height="40"></div>
+        <div class="partner-logo"><img src="images/partner-boeing.svg" alt="Boeing" height="40"></div>
+        <div class="partner-logo"><img src="images/partner-raytheon.svg" alt="Raytheon Technologies" height="40"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: BLOG PREVIEW -->
+  <section class="section" id="blog-preview">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge reveal"><i class="fas fa-newspaper"></i> Latest Insights</div>
+        <h2 class="section-title reveal stagger-1">From Our <span>Blog</span></h2>
+        <p class="section-subtitle reveal stagger-2">Stay updated with the latest developments in aerospace technology and space exploration.</p>
+      </div>
+      <div class="blog-grid">
+        <div class="blog-card reveal stagger-1">
+          <div class="blog-card-image">
+            <img src="images/nasa-mission.webp" alt="Electric Propulsion" style="width:100%;height:100%;object-fit:cover;">
+            <span class="blog-card-category">Technology</span>
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-card-meta">
+              <span><i class="far fa-calendar"></i> Jul 20, 2026</span>
+              <span><i class="far fa-clock"></i> 8 min read</span>
+            </div>
+            <h3>The Future of Electric Propulsion in Deep Space Missions</h3>
+            <p>Exploring how ion drives and Hall thrusters are revolutionizing interplanetary travel capabilities.</p>
+            <div class="blog-card-footer">
+              <div class="blog-card-author">
+                <div class="blog-card-author-avatar">AK</div>
+                <span>Dr. A. Kumar</span>
+              </div>
+              <a href="404.html" class="learn-more">Read</a>
+            </div>
+          </div>
+        </div>
+        <div class="blog-card reveal stagger-2">
+          <div class="blog-card-image">
+            <img src="images/blog-reusable.webp" alt="Reusable Launch Systems" style="width:100%;height:100%;object-fit:cover;">
+            <span class="blog-card-category">Innovation</span>
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-card-meta">
+              <span><i class="far fa-calendar"></i> Jul 15, 2026</span>
+              <span><i class="far fa-clock"></i> 6 min read</span>
+            </div>
+            <h3>Reusable Launch Systems: Reducing Cost to Orbit by 10x</h3>
+            <p>How next-generation reusable rockets are transforming the economics of space access.</p>
+            <div class="blog-card-footer">
+              <div class="blog-card-author">
+                <div class="blog-card-author-avatar">LM</div>
+                <span>Lisa Martinez</span>
+              </div>
+              <a href="404.html" class="learn-more">Read</a>
+            </div>
+          </div>
+        </div>
+        <div class="blog-card reveal stagger-3">
+          <div class="blog-card-image">
+            <img src="images/blog-quantum.webp" alt="Quantum Satellite Communications" style="width:100%;height:100%;object-fit:cover;">
+            <span class="blog-card-category">Research</span>
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-card-meta">
+              <span><i class="far fa-calendar"></i> Jul 10, 2026</span>
+              <span><i class="far fa-clock"></i> 10 min read</span>
+            </div>
+            <h3>Quantum-Secure Satellite Communications: A New Era</h3>
+            <p>Breaking down the quantum key distribution technology enabling unhackable satellite links.</p>
+            <div class="blog-card-footer">
+              <div class="blog-card-author">
+                <div class="blog-card-author-avatar">RW</div>
+                <span>Dr. R. Williams</span>
+              </div>
+              <a href="404.html" class="learn-more">Read</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:2.5rem;" class="reveal">
+        <a href="404.html" class="btn btn-secondary">View All Articles</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9: CTA -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-box reveal-scale">
+        <h2 class="text-shimmer">Ready to Launch Your Next Mission?</h2>
+        <p>Partner with Stackly and leverage our 35+ years of aerospace engineering excellence to turn your vision into reality.</p>
+        <div class="cta-actions">
+          <a href="404.html" class="btn btn-primary btn-lg">Start Your Project <i class="fas fa-rocket"></i></a>
+          <a href="404.html" class="btn btn-secondary btn-lg">Schedule Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 10: FOOTER -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="images/logo.webp" alt="Stackly">
+        </a>
+        <p>Pioneering the future of aerospace engineering with innovative solutions that push the boundaries of flight and space exploration.</p>
+        <div class="footer-social">
+          <a href="404.html"><i class="fab fa-twitter"></i></a>
+          <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+          <a href="404.html"><i class="fab fa-github"></i></a>
+          <a href="404.html"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Solutions</h4>
+        <ul class="footer-links">
+          <li><a href="services.html">Launch Vehicles</a></li>
+          <li><a href="services.html">Satellite Systems</a></li>
+          <li><a href="services.html">Avionics</a></li>
+          <li><a href="services.html">Propulsion</a></li>
+          <li><a href="services.html">Analytics</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact Us</h4>
+        <ul class="footer-links">
+          <li style="display:flex;gap:0.5rem;align-items:flex-start;"><i class="fas fa-location-dot" style="margin-top:0.3rem;color:var(--accent);flex-shrink:0;"></i><span>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</span></li>
+          <li><i class="fas fa-envelope" style="margin-right:0.5rem;color:var(--accent);"></i><a href="404.html">info@thestackly.com</a></li>
+          <li><i class="fas fa-envelope" style="margin-right:0.5rem;color:var(--accent);"></i><a href="404.html">thestackly@gmail.com</a></li>
+          <li><i class="fab fa-whatsapp" style="margin-right:0.5rem;color:var(--accent);"></i><a href="404.html" target="_blank">+91 70107 92745</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Stackly Aerospace. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="404.html">Privacy Policy</a>
+        <a href="404.html">Terms of Service</a>
+        <a href="404.html">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

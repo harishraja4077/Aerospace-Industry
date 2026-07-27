@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Not Found | Stackly Aerospace</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div class="cursor-glow"></div>
+  <canvas id="particles-canvas"></canvas>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.webp" alt="Stackly">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="signin.html" class="btn btn-ghost btn-sm">Sign In</a>
+      <a href="signup.html" class="btn btn-primary btn-sm">Get Started</a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="error-wrapper">
+    <div class="error-bg">
+      <div class="auth-bg-gradient"></div>
+      <div class="auth-bg-gradient"></div>
+      <div class="hero-grid-overlay"></div>
+    </div>
+    <div class="error-content">
+      <div class="error-illustration reveal-scale" style="margin-bottom:2rem;">
+        <img src="images/hero-space.webp" alt="Lost in Space" style="width:280px;height:auto;border-radius:var(--radius-xl);border:1px solid var(--border);box-shadow:var(--shadow-glow);opacity:0.9;">
+      </div>
+
+      <div class="error-code reveal stagger-1">404</div>
+      <h1 class="error-title reveal stagger-2">Lost in Space</h1>
+      <p class="error-text reveal stagger-3">
+        The page you're looking for has drifted out of orbit. It may have been moved, deleted, or perhaps it never existed in this timeline.
+      </p>
+      <div class="error-actions reveal stagger-4">
+        <a href="index.html" class="btn btn-primary btn-lg"><i class="fas fa-home"></i> Return to Base</a>
+        <a href="contact.html" class="btn btn-secondary btn-lg"><i class="fas fa-headset"></i> Contact Mission Control</a>
+        <button onclick="history.back()" class="btn btn-ghost btn-lg"><i class="fas fa-arrow-left"></i> Go Back</button>
+      </div>
+
+      <div class="reveal stagger-5" style="margin-top:3rem;">
+        <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:1rem;">Or try one of these:</p>
+        <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
+          <a href="about.html" class="btn btn-ghost btn-sm">About Us</a>
+          <a href="services.html" class="btn btn-ghost btn-sm">Services</a>
+          <a href="blog.html" class="btn btn-ghost btn-sm">Blog</a>
+          <a href="signin.html" class="btn btn-ghost btn-sm">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

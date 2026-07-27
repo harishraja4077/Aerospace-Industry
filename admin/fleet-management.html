@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fleet Management - STACKLY Aerospace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo"><a href="../index.html"><img src="../images/logo.webp" alt="STACKLY" class="sidebar-logo-img"></a></div>
+      <button class="sidebar-toggle" id="sidebarToggle"><i class="fas fa-chevron-left"></i></button>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">Main</div>
+      <a href="admin-dashboard.html" class="sidebar-link"><i class="fas fa-grid-2"></i><span>Dashboard</span></a>
+      <a href="fleet-management.html" class="sidebar-link active"><i class="fas fa-jet-fighter-up"></i><span>Fleet Management</span></a>
+      <a href="production.html" class="sidebar-link"><i class="fas fa-industry"></i><span>Production</span></a>
+      <a href="maintenance.html" class="sidebar-link"><i class="fas fa-wrench"></i><span>Maintenance</span></a>
+      <div class="sidebar-section">Analytics</div>
+      <a href="reports.html" class="sidebar-link"><i class="fas fa-chart-mixed"></i><span>Reports</span></a>
+      <a href="settings.html" class="sidebar-link"><i class="fas fa-gear"></i><span>Settings</span></a>
+      <div class="sidebar-divider"></div>
+      <a href="../index.html" class="sidebar-link"><i class="fas fa-arrow-left"></i><span>Back to Site</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">AD</div>
+        <div class="sidebar-user-info"><span class="sidebar-user-name">Admin User</span><span class="sidebar-user-role">System Admin</span></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content" id="mainContent">
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        <div class="topbar-breadcrumb"><span class="breadcrumb-home"><i class="fas fa-grid-2"></i></span><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Fleet Management</span></div>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-search"><i class="fas fa-search"></i><input type="text" placeholder="Search..."></div>
+        <a href="../404.html" class="topbar-icon-btn"><i class="fas fa-bell"></i><span class="notif-badge">5</span></a>
+        <a href="../404.html" class="topbar-icon-btn"><i class="fas fa-envelope"></i><span class="notif-badge">3</span></a>
+        <div class="topbar-divider"></div>
+        <div class="topbar-profile"><div class="topbar-avatar">AD</div><div class="topbar-profile-info"><span class="topbar-name">Admin User</span><span class="topbar-role">System Admin</span></div><i class="fas fa-chevron-down"></i></div>
+      </div>
+    </header>
+
+    <div class="dashboard">
+      <div class="page-header">
+        <h2 class="page-title">Fleet Management</h2>
+        <div class="page-actions">
+          <a href="../404.html" class="btn btn-secondary"><i class="fas fa-filter"></i> Filter</a>
+          <a href="../404.html" class="btn btn-primary"><i class="fas fa-plus"></i> Add Aircraft</a>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-blue"><i class="fas fa-plane"></i></div>
+          <div class="stat-info">
+            <span class="stat-value">124</span>
+            <span class="stat-label">Total Aircraft</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-green"><i class="fas fa-check-circle"></i></div>
+          <div class="stat-info">
+            <span class="stat-value">98</span>
+            <span class="stat-label">Operational</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-orange"><i class="fas fa-wrench"></i></div>
+          <div class="stat-info">
+            <span class="stat-value">17</span>
+            <span class="stat-label">In Maintenance</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-red"><i class="fas fa-plane-slash"></i></div>
+          <div class="stat-info">
+            <span class="stat-value">9</span>
+            <span class="stat-label">Grounded</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Aircraft Fleet Inventory<span class="card-subtitle">Complete fleet overview</span></h3>
+          <div class="card-actions">
+            <a href="../404.html" class="chart-filter active">All</a>
+            <a href="../404.html" class="chart-filter">Wide-Body</a>
+            <a href="../404.html" class="chart-filter">Narrow-Body</a>
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Aircraft ID</th>
+                <th>Model</th>
+                <th>Registration</th>
+                <th>Category</th>
+                <th>Flight Hours</th>
+                <th>Status</th>
+                <th>Location</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="table-id">AC-001</td>
+                <td>Boeing 787-9</td>
+                <td>N789BA</td>
+                <td>Wide-Body</td>
+                <td>12,450</td>
+                <td><span class="status-badge active">Operational</span></td>
+                <td>JFK Hub</td>
+                <td><a href="../404.html" class="icon-btn"><i class="fas fa-eye"></i></a><a href="../404.html" class="icon-btn"><i class="fas fa-edit"></i></a></td>
+              </tr>
+              <tr>
+                <td class="table-id">AC-002</td>
+                <td>Airbus A350-1000</td>
+                <td>F-WWGG</td>
+                <td>Wide-Body</td>
+                <td>8,720</td>
+                <td><span class="status-badge active">Operational</span></td>
+                <td>LAX Hub</td>
+                <td><a href="../404.html" class="icon-btn"><i class="fas fa-eye"></i></a><a href="../404.html" class="icon-btn"><i class="fas fa-edit"></i></a></td>
+              </tr>
+              <tr>
+                <td class="table-id">AC-003</td>
+                <td>Boeing 777-300ER</td>
+                <td>A6ECT</td>
+                <td>Wide-Body</td>
+                <td>18,330</td>
+                <td><span class="status-badge warning">Maintenance</span></td>
+                <td>DXB MRO</td>
+                <td><a href="../404.html" class="icon-btn"><i class="fas fa-eye"></i></a><a href="../404.html" class="icon-btn"><i class="fas fa-edit"></i></a></td>
+              </tr>
+              <tr>
+                <td class="table-id">AC-004</td>
+                <td>Airbus A320neo</td>
+                <td>N12345</td>
+                <td>Narrow-Body</td>
+                <td>5,890</td>
+                <td><span class="status-badge active">Operational</span></td>
+                <td>CDG Hub</td>
+                <td><a href="../404.html" class="icon-btn"><i class="fas fa-eye"></i></a><a href="../404.html" class="icon-btn"><i class="fas fa-edit"></i></a></td>
+              </tr>
+              <tr>
+                <td class="table-id">AC-005</td>
+                <td>Boeing 737 MAX 8</td>
+                <td>N378BA</td>
+                <td>Narrow-Body</td>
+                <td>3,210</td>
+                <td><span class="status-badge active">Operational</span></td>
+                <td>SFO Hub</td>
+                <td><a href="../404.html" class="icon-btn"><i class="fas fa-eye"></i></a><a href="../404.html" class="icon-btn"><i class="fas fa-edit"></i></a></td>
+              </tr>
+              <tr>
+                <td class="table-id">AC-006</td>
+                <td>Airbus A380-800</td>
+                <td>A6-EUA</td>
+                <td>Wide-Body</td>
+                <td>22,100</td>
+                <td><span class="status-badge delayed">Grounded</span></td>
+                <td>SYD Hangar</td>
+                <td><a href="../404.html" class="icon-btn"><i class="fas fa-eye"></i></a><a href="../404.html" class="icon-btn"><i class="fas fa-edit"></i></a></td>
+              </tr>
+              <tr>
+                <td class="table-id">AC-007</td>
+                <td>Boeing 767-300F</td>
+                <td>N763AF</td>
+                <td>Freighter</td>
+                <td>14,670</td>
+                <td><span class="status-badge active">Operational</span></td>
+                <td>ORD Hub</td>
+                <td><a href="../404.html" class="icon-btn"><i class="fas fa-eye"></i></a><a href="../404.html" class="icon-btn"><i class="fas fa-edit"></i></a></td>
+              </tr>
+              <tr>
+                <td class="table-id">AC-008</td>
+                <td>Airbus A330-900neo</td>
+                <td>B-5968</td>
+                <td>Wide-Body</td>
+                <td>6,430</td>
+                <td><span class="status-badge warning">Maintenance</span></td>
+                <td>SIN MRO</td>
+                <td><a href="../404.html" class="icon-btn"><i class="fas fa-eye"></i></a><a href="../404.html" class="icon-btn"><i class="fas fa-edit"></i></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="charts-grid">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Fleet by Manufacturer<span class="card-subtitle">Distribution by brand</span></h3>
+          </div>
+          <div class="chart-body-donut">
+            <div class="donut-center">
+              <span class="donut-value">124</span>
+              <span class="donut-label">Total Fleet</span>
+            </div>
+            <canvas data-chart="donut" data-values='[58,42,15,9]' data-labels='["Boeing","Airbus","Embraer","Bombardier"]' data-colors='["#38BDF8","#06B6D4","#F59E0B","#22C55E"]'></canvas>
+            <div class="donut-legend">
+              <div class="legend-item"><span class="legend-dot" style="background:#38BDF8"></span>Boeing <span class="legend-value">58</span></div>
+              <div class="legend-item"><span class="legend-dot" style="background:#06B6D4"></span>Airbus <span class="legend-value">42</span></div>
+              <div class="legend-item"><span class="legend-dot" style="background:#F59E0B"></span>Embraer <span class="legend-value">15</span></div>
+              <div class="legend-item"><span class="legend-dot" style="background:#22C55E"></span>Bombardier <span class="legend-value">9</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Flight Hours Distribution<span class="card-subtitle">Usage analytics</span></h3>
+          </div>
+          <div class="chart-body">
+            <canvas data-chart="bar" data-labels='["0-5K","5K-10K","10K-15K","15K-20K","20K+"]' data-datasets='[{"values":[18,32,40,22,12],"color":"#38BDF8","label":"Aircraft Count"}]'></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

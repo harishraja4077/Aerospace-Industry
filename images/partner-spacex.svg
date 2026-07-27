@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
+  <path d="M15 45 L25 10 L35 45 L30 38 L20 38 Z" fill="#005288"/>
+  <path d="M18 30 L25 10 L32 30" stroke="#005288" stroke-width="1.5" fill="none"/>
+  <text x="50" y="38" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="bold" fill="#005288" letter-spacing="1">Space</text>
+  <text x="148" y="38" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="300" fill="#005288" letter-spacing="1">X</text>
+</svg>

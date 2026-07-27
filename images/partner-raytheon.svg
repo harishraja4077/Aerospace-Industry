@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
+  <polygon points="20,8 32,48 8,48" stroke="#C8102E" stroke-width="2" fill="none"/>
+  <polygon points="20,16 28,44 12,44" fill="#C8102E" opacity="0.12"/>
+  <circle cx="20" cy="32" r="4" fill="#C8102E" opacity="0.4"/>
+  <text x="45" y="28" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="bold" fill="#333" letter-spacing="1">RAYTHEON</text>
+  <text x="45" y="44" font-family="Arial,Helvetica,sans-serif" font-size="11" fill="#666" letter-spacing="2">TECHNOLOGIES</text>
+</svg>

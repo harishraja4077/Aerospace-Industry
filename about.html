@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Stackly Aerospace</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div class="preloader">
+    <div class="preloader-logo">STACKLY</div>
+    <div class="preloader-bar"></div>
+  </div>
+  <div class="cursor-glow"></div>
+  <canvas id="particles-canvas"></canvas>
+  <div class="page-transition"></div>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.webp" alt="Stackly">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="signin.html" class="btn btn-ghost btn-sm">Sign In</a>
+      <a href="signup.html" class="btn btn-primary btn-sm">Get Started</a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- SECTION 1: PAGE HERO -->
+  <section class="page-hero">
+    <div class="hero-bg">
+      <div class="hero-bg-gradient"></div>
+      <div class="hero-bg-gradient"></div>
+      <div class="hero-grid-overlay"></div>
+    </div>
+    <h1 class="reveal">About <span style="background:var(--accent-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Stackly</span></h1>
+    <div class="breadcrumb reveal stagger-1">
+      <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>About Us</span>
+    </div>
+  </section>
+
+  <!-- SECTION 2: MISSION & VISION -->
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content reveal-left">
+          <div class="section-badge"><i class="fas fa-bullseye"></i> Our Mission</div>
+          <h2 class="section-title">Empowering Humanity's Journey to the <span>Stars</span></h2>
+          <p class="section-subtitle" style="text-align:left;margin:0;">
+            At Stackly, our mission is to democratize access to space and advance aerospace technology for the betterment of humanity. We believe that the future of our species lies beyond Earth, and we're building the technology to get us there.
+          </p>
+          <div class="about-features">
+            <div class="about-feature reveal stagger-1">
+              <div class="about-feature-icon"><i class="fas fa-lightbulb"></i></div>
+              <div>
+                <h4>Innovation First</h4>
+                <p>Every project begins with a question: "How can we do this better?" We challenge conventions and pioneer new approaches.</p>
+              </div>
+            </div>
+            <div class="about-feature reveal stagger-2">
+              <div class="about-feature-icon"><i class="fas fa-users"></i></div>
+              <div>
+                <h4>People-Centric</h4>
+                <p>Our greatest asset is our team of world-class engineers, scientists, and visionaries working together.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-image-wrapper reveal-right">
+          <img src="images/nasa-mission.webp" alt="Space Mission" style="width:100%;height:100%;object-fit:cover;">
+          <div class="about-image-overlay"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: TIMELINE / HISTORY -->
+  <section class="section" style="background:var(--primary-light);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge reveal"><i class="fas fa-timeline"></i> Our Journey</div>
+        <h2 class="section-title reveal stagger-1">A Legacy of <span>Innovation</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal stagger-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">1991</div>
+          <h3>Foundation</h3>
+          <p>Stackly founded by Dr. Elena Vasquez with a vision to revolutionize commercial aerospace engineering.</p>
+        </div>
+        <div class="timeline-item reveal stagger-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2003</div>
+          <h3>First Launch Success</h3>
+          <p>Successfully launched our first orbital vehicle, AV-1 Pioneer, establishing credibility in the launch market.</p>
+        </div>
+        <div class="timeline-item reveal stagger-3">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2012</div>
+          <h3>Global Expansion</h3>
+          <p>Opened facilities in 12 countries, serving clients across 42 nations with a team of 1,500+ engineers.</p>
+        </div>
+        <div class="timeline-item reveal stagger-4">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2020</div>
+          <h3>Quantum Comms Breakthrough</h3>
+          <p>Achieved first quantum-encrypted satellite communication, setting a new standard for secure data transmission.</p>
+        </div>
+        <div class="timeline-item reveal stagger-5">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2026</div>
+          <h3>Mars Mission Partnership</h3>
+          <p>Selected as primary technology partner for the international Mars exploration program launching in 2028.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: VALUES -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge reveal"><i class="fas fa-gem"></i> Core Values</div>
+        <h2 class="section-title reveal stagger-1">What <span>Drives</span> Us</h2>
+        <p class="section-subtitle reveal stagger-2">Our values define who we are and guide every decision we make.</p>
+      </div>
+      <div class="services-grid" style="grid-template-columns:repeat(3,1fr);">
+        <div class="service-card reveal stagger-1">
+          <div class="service-icon"><i class="fas fa-atom"></i></div>
+          <h3>Scientific Rigor</h3>
+          <p>Every claim is backed by data. Every design is validated through rigorous testing and peer review.</p>
+        </div>
+        <div class="service-card reveal stagger-2">
+          <div class="service-icon"><i class="fas fa-hand-holding-heart"></i></div>
+          <h3>Ethical Engineering</h3>
+          <p>We build technology responsibly, considering the environmental and societal impact of every project.</p>
+        </div>
+        <div class="service-card reveal stagger-3">
+          <div class="service-icon"><i class="fas fa-bolt"></i></div>
+          <h3>Relentless Ambition</h3>
+          <p>We don't settle for "good enough." We push boundaries and strive for breakthroughs that change the world.</p>
+        </div>
+        <div class="service-card reveal stagger-4">
+          <div class="service-icon"><i class="fas fa-link"></i></div>
+          <h3>Collaboration</h3>
+          <p>The greatest achievements in aerospace come from partnerships. We work alongside our clients as true partners.</p>
+        </div>
+        <div class="service-card reveal stagger-5">
+          <div class="service-icon"><i class="fas fa-shield-halved"></i></div>
+          <h3>Safety Excellence</h3>
+          <p>Safety is never compromised. Our redundant systems and protocols ensure mission and crew protection.</p>
+        </div>
+        <div class="service-card reveal stagger-6">
+          <div class="service-icon"><i class="fas fa-seedling"></i></div>
+          <h3>Sustainability</h3>
+          <p>Green propulsion, debris mitigation, and sustainable space practices for future generations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: TEAM -->
+  <section class="section" style="background:var(--primary-light);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge reveal"><i class="fas fa-user-astronaut"></i> Leadership</div>
+        <h2 class="section-title reveal stagger-1">Meet Our <span>Team</span></h2>
+        <p class="section-subtitle reveal stagger-2">World-class leaders driving the future of aerospace.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card reveal stagger-1">
+          <div class="team-avatar">EV</div>
+          <h4>Dr. Elena Vasquez</h4>
+          <p class="team-role">CEO & Founder</p>
+          <p>Former NASA engineer with 30+ years in propulsion systems and mission architecture.</p>
+        </div>
+        <div class="team-card reveal stagger-2">
+          <div class="team-avatar">JC</div>
+          <h4>Dr. James Chen</h4>
+          <p class="team-role">Chief Technology Officer</p>
+          <p>MIT PhD in aerospace engineering, leading our next-gen propulsion and materials research.</p>
+        </div>
+        <div class="team-card reveal stagger-3">
+          <div class="team-avatar">AK</div>
+          <h4>Dr. Amara Kofi</h4>
+          <p class="team-role">VP of Engineering</p>
+          <p>Expert in orbital mechanics and satellite constellation design with 15+ published papers.</p>
+        </div>
+        <div class="team-card reveal stagger-4">
+          <div class="team-avatar">MP</div>
+          <h4>Michael Park</h4>
+          <p class="team-role">Head of Operations</p>
+          <p>Ensures seamless execution of complex multi-national aerospace programs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: STATS -->
+  <section class="section stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card reveal stagger-1">
+          <div class="stat-icon"><i class="fas fa-rocket"></i></div>
+          <div class="stat-number" data-count="500" data-suffix="+">0</div>
+          <div class="stat-label">Missions Launched</div>
+        </div>
+        <div class="stat-card reveal stagger-2">
+          <div class="stat-icon"><i class="fas fa-building"></i></div>
+          <div class="stat-number" data-count="18" data-suffix="">0</div>
+          <div class="stat-label">Global Facilities</div>
+        </div>
+        <div class="stat-card reveal stagger-3">
+          <div class="stat-icon"><i class="fas fa-users"></i></div>
+          <div class="stat-number" data-count="2500" data-suffix="+">0</div>
+          <div class="stat-label">Team Members</div>
+        </div>
+        <div class="stat-card reveal stagger-4">
+          <div class="stat-icon"><i class="fas fa-globe"></i></div>
+          <div class="stat-number" data-count="42" data-suffix="">0</div>
+          <div class="stat-label">Countries Served</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: CTA -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-box reveal-scale">
+        <h2 class="text-shimmer">Join Our Mission</h2>
+        <p>We're always looking for exceptional talent to join our team. Help us shape the future of aerospace.</p>
+        <div class="cta-actions">
+          <a href="404.html" class="btn btn-primary btn-lg">View Open Positions</a>
+          <a href="404.html" class="btn btn-secondary btn-lg">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: FOOTER -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="images/logo.webp" alt="Stackly">
+        </a>
+        <p>Pioneering the future of aerospace engineering with innovative solutions that push the boundaries of flight and space exploration.</p>
+        <div class="footer-social">
+          <a href="404.html"><i class="fab fa-twitter"></i></a>
+          <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+          <a href="404.html"><i class="fab fa-github"></i></a>
+          <a href="404.html"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Solutions</h4>
+        <ul class="footer-links">
+          <li><a href="services.html">Launch Vehicles</a></li>
+          <li><a href="services.html">Satellite Systems</a></li>
+          <li><a href="services.html">Avionics</a></li>
+          <li><a href="services.html">Propulsion</a></li>
+          <li><a href="services.html">Analytics</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact Us</h4>
+        <ul class="footer-links">
+          <li style="display:flex;gap:0.5rem;align-items:flex-start;"><i class="fas fa-location-dot" style="margin-top:0.3rem;color:var(--accent);flex-shrink:0;"></i><span>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</span></li>
+          <li><i class="fas fa-envelope" style="margin-right:0.5rem;color:var(--accent);"></i><a href="404.html">info@thestackly.com</a></li>
+          <li><i class="fas fa-envelope" style="margin-right:0.5rem;color:var(--accent);"></i><a href="404.html">thestackly@gmail.com</a></li>
+          <li><i class="fab fa-whatsapp" style="margin-right:0.5rem;color:var(--accent);"></i><a href="404.html" target="_blank">+91 70107 92745</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Stackly Aerospace. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="404.html">Privacy Policy</a>
+        <a href="404.html">Terms of Service</a>
+        <a href="404.html">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+  <script src="js/main.js"></script>
+</body>
+</html>

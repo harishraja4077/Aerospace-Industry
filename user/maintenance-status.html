@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly - Maintenance Status</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="../index.html" class="sidebar-logo"><img src="../images/logo.webp" alt="STACKLY" class="sidebar-logo-img"></a>
+      <button class="sidebar-toggle" id="sidebarToggle"><i class="fas fa-chevron-left"></i></button>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">Main</div>
+      <a href="user-dashboard.html" class="sidebar-link"><i class="fas fa-grid-2"></i><span>Dashboard</span></a>
+      <a href="my-aircraft.html" class="sidebar-link"><i class="fas fa-plane"></i><span>My Aircraft</span></a>
+      <a href="maintenance-status.html" class="sidebar-link active"><i class="fas fa-wrench"></i><span>Maintenance Status</span></a>
+      <div class="sidebar-section">Resources</div>
+      <a href="documents.html" class="sidebar-link"><i class="fas fa-folder-open"></i><span>Documents</span></a>
+      <a href="support.html" class="sidebar-link"><i class="fas fa-headset"></i><span>Support</span></a>
+      <a href="profile.html" class="sidebar-link"><i class="fas fa-user"></i><span>Profile</span></a>
+      <div class="sidebar-divider"></div>
+      <a href="../index.html" class="sidebar-link"><i class="fas fa-arrow-left"></i><span>Back to Site</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">JD</div>
+        <div class="sidebar-user-info"><span class="sidebar-user-name">James Davidson</span><span class="sidebar-user-role">Fleet Operator</span></div>
+      </div>
+    </div>
+  </aside>
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+      <div class="topbar-breadcrumb"><span class="breadcrumb-home"><i class="fas fa-grid-2"></i></span><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Maintenance Status</span></div>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-search"><i class="fas fa-search"></i><input type="text" placeholder="Search..."></div>
+      <a href="../404.html" class="topbar-icon-btn"><i class="fas fa-bell"></i><span class="notif-badge">3</span></a>
+      <div class="topbar-divider"></div>
+      <div class="topbar-profile"><div class="topbar-avatar">JD</div><div class="topbar-profile-info"><span class="topbar-name">James Davidson</span><span class="topbar-role">Fleet Operator</span></div><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </header>
+
+  <main class="main-content" id="mainContent">
+    <div class="dashboard">
+      <div class="stats-grid">
+        <div class="stat-card glass" data-animate>
+          <div class="stat-icon" style="background:rgba(56,189,248,0.1);color:#38BDF8;"><i class="fas fa-clipboard-list"></i></div>
+          <div class="stat-info"><span class="stat-label">Total Work Orders</span><span class="stat-value" data-count="23">0</span></div>
+          <span class="stat-trend trend-neutral"><i class="fas fa-minus"></i> 0</span>
+        </div>
+        <div class="stat-card glass" data-animate>
+          <div class="stat-icon" style="background:rgba(245,158,11,0.1);color:#F59E0B;"><i class="fas fa-spinner"></i></div>
+          <div class="stat-info"><span class="stat-label">In Progress</span><span class="stat-value" data-count="8">0</span></div>
+          <span class="stat-trend trend-neutral"><i class="fas fa-minus"></i> 0</span>
+        </div>
+        <div class="stat-card glass" data-animate>
+          <div class="stat-icon" style="background:rgba(34,197,94,0.1);color:#22C55E;"><i class="fas fa-check"></i></div>
+          <div class="stat-info"><span class="stat-label">Completed</span><span class="stat-value" data-count="12">0</span></div>
+          <span class="stat-trend trend-up"><i class="fas fa-arrow-up"></i> +4</span>
+        </div>
+        <div class="stat-card glass" data-animate>
+          <div class="stat-icon" style="background:rgba(239,68,68,0.1);color:#EF4444;"><i class="fas fa-exclamation-triangle"></i></div>
+          <div class="stat-info"><span class="stat-label">Overdue</span><span class="stat-value" data-count="3">0</span></div>
+          <span class="stat-trend trend-down"><i class="fas fa-arrow-down"></i> -1</span>
+        </div>
+      </div>
+
+      <div class="charts-grid-equal">
+        <div class="chart-card glass" data-animate>
+          <div class="chart-header"><h3 class="chart-title">Tasks by Category</h3></div>
+          <div class="chart-body chart-body-donut">
+            <canvas data-chart="donut" data-values='[35,25,20,15,5]' data-labels='["Engine","Airframe","Avionics","Hydraulics","Other"]' data-colors='["#38BDF8","#06B6D4","#F59E0B","#22C55E","#A855F7"]'></canvas>
+            <div class="donut-center"><span class="donut-value">23</span><span class="donut-label">Total Tasks</span></div>
+            <div class="chart-legend">
+              <div class="legend-item"><span class="legend-color" style="background:#38BDF8;"></span>Engine</div>
+              <div class="legend-item"><span class="legend-color" style="background:#06B6D4;"></span>Airframe</div>
+              <div class="legend-item"><span class="legend-color" style="background:#F59E0B;"></span>Avionics</div>
+              <div class="legend-item"><span class="legend-color" style="background:#22C55E;"></span>Hydraulics</div>
+              <div class="legend-item"><span class="legend-color" style="background:#A855F7;"></span>Other</div>
+            </div>
+          </div>
+        </div>
+        <div class="chart-card glass" data-animate>
+          <div class="chart-header"><h3 class="chart-title">Monthly Completion</h3></div>
+          <div class="chart-body"><canvas data-chart="line" data-labels='["Jan","Feb","Mar","Apr","May","Jun"]' data-datasets='[{"values":[18,22,19,25,21,28],"color":"#22C55E","label":"Completed"},{"values":[20,24,22,26,23,30],"color":"#38BDF8","label":"Scheduled"}]'></canvas></div>
+        </div>
+      </div>
+
+      <div class="bottom-grid-1">
+        <div class="chart-card glass" data-animate>
+          <div class="chart-header"><h3 class="chart-title">Active Work Orders</h3><div class="chart-actions"><a href="../404.html" class="btn btn-sm btn-outline">Export</a></div></div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead><tr><th>WO ID</th><th>Aircraft</th><th>Task</th><th>Assigned To</th><th>Priority</th><th>Due Date</th></tr></thead>
+              <tbody>
+                <tr><td>WO-4821</td><td>B787-9 (N789SA)</td><td>Engine Module Overhaul</td><td>Mike Chen</td><td><span class="priority-badge priority-high">Critical</span></td><td>Jul 25, 2026</td></tr>
+                <tr><td>WO-4822</td><td>A350-900 (A35F01)</td><td>Avionics Software Update</td><td>Sarah Kim</td><td><span class="priority-badge priority-medium">Medium</span></td><td>Jul 30, 2026</td></tr>
+                <tr><td>WO-4823</td><td>B737 MAX (B7M201)</td><td>Hydraulic System Flush</td><td>Tom Williams</td><td><span class="priority-badge priority-high">High</span></td><td>Aug 02, 2026</td></tr>
+                <tr><td>WO-4824</td><td>A320neo (A32N05)</td><td>Landing Gear Inspection</td><td>Lisa Park</td><td><span class="priority-badge priority-medium">Medium</span></td><td>Aug 08, 2026</td></tr>
+                <tr><td>WO-4825</td><td>B787-9 (N789SA)</td><td>Cabin Pressurization Check</td><td>Mike Chen</td><td><span class="priority-badge priority-low">Low</span></td><td>Aug 15, 2026</td></tr>
+                <tr><td>WO-4826</td><td>A350-900 (A35F01)</td><td>APU Performance Test</td><td>Tom Williams</td><td><span class="priority-badge priority-medium">Medium</span></td><td>Aug 20, 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

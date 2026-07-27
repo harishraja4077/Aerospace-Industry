@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Stackly Aerospace</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div class="preloader">
+    <div class="preloader-logo">STACKLY</div>
+    <div class="preloader-bar"></div>
+  </div>
+  <div class="cursor-glow"></div>
+  <canvas id="particles-canvas"></canvas>
+  <div class="page-transition"></div>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.webp" alt="Stackly">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="signin.html" class="btn btn-ghost btn-sm">Sign In</a>
+      <a href="signup.html" class="btn btn-primary btn-sm">Get Started</a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- SECTION 1: PAGE HERO -->
+  <section class="page-hero">
+    <div class="hero-bg">
+      <div class="hero-bg-gradient"></div>
+      <div class="hero-bg-gradient"></div>
+      <div class="hero-grid-overlay"></div>
+    </div>
+    <h1 class="reveal">Contact <span style="background:var(--accent-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Us</span></h1>
+    <div class="breadcrumb reveal stagger-1">
+      <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>Contact</span>
+    </div>
+  </section>
+
+  <!-- SECTION 2: CONTACT INFO + FORM -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-badge reveal"><i class="fas fa-address-card"></i> Get in Touch</div>
+          <h2 class="section-title reveal stagger-1" style="text-align:left;font-size:1.8rem;">Let's Build Something <span>Extraordinary</span></h2>
+          <p class="section-subtitle reveal stagger-2" style="text-align:left;margin:0 0 1.5rem 0;">
+            Whether you have a mission to plan, a question about our services, or want to explore a partnership, our team is ready to help.
+          </p>
+          <div class="about-image-wrapper reveal stagger-2" style="aspect-ratio:16/9;margin-bottom:1.5rem;">
+            <img src="images/contact-office.webp" alt="Stackly Mission Control" style="width:100%;height:100%;object-fit:cover;">
+            <div class="about-image-overlay"></div>
+          </div>
+          <div class="contact-info-card reveal stagger-3">
+            <div class="contact-info-icon"><i class="fas fa-location-dot"></i></div>
+            <div>
+              <h4>Headquarters</h4>
+              <p>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</p>
+            </div>
+          </div>
+          <div class="contact-info-card reveal stagger-4">
+            <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <h4>Phone</h4>
+              <p>+1 (832) 555-0199<br>+1 (832) 555-0200 (24/7 Mission Support)</p>
+            </div>
+          </div>
+          <div class="contact-info-card reveal stagger-5">
+            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <p>missions@stackly.aero<br>careers@stackly.aero</p>
+            </div>
+          </div>
+          <div class="contact-info-card reveal stagger-6">
+            <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h4>Office Hours</h4>
+              <p>Monday - Friday: 8:00 AM - 6:00 PM CST<br>Mission Control: 24/7</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrapper reveal-right">
+          <h3 style="font-family:'Rajdhani',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:1.5rem;">Send Us a Message</h3>
+          <form class="contact-form" onsubmit="event.preventDefault();const btn=this.querySelector('button[type=submit]');btn.textContent='Sending...';btn.disabled=true;setTimeout(()=>{btn.textContent='Sent!';setTimeout(()=>{btn.textContent='Send Message';btn.disabled=false;this.reset()},2000)},1500)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" placeholder="John" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" placeholder="Doe" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="john@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" required>
+                <option value="">Select a topic</option>
+                <option>Launch Vehicle Inquiry</option>
+                <option>Satellite Systems</option>
+                <option>Defense Solutions</option>
+                <option>Partnership Opportunity</option>
+                <option>Careers</option>
+                <option>General Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" placeholder="Tell us about your mission or inquiry..." rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message <i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: GLOBAL OFFICES -->
+  <section class="section" style="background:var(--primary-light);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge reveal"><i class="fas fa-globe"></i> Global Presence</div>
+        <h2 class="section-title reveal stagger-1">Our <span>Offices</span></h2>
+        <p class="section-subtitle reveal stagger-2">With facilities across the globe, we're always close to our clients.</p>
+      </div>
+      <div class="services-grid" style="grid-template-columns:repeat(4,1fr);">
+        <div class="service-card reveal stagger-1" style="text-align:center;">
+          <div class="service-icon" style="margin:0 auto 1rem;"><i class="fas fa-flag-usa"></i></div>
+          <h3>Salem, Tamil Nadu</h3>
+          <p>Global HQ & Mission Control</p>
+        </div>
+        <div class="service-card reveal stagger-2" style="text-align:center;">
+          <div class="service-icon" style="margin:0 auto 1rem;"><i class="fas fa-flag"></i></div>
+          <h3>Toulouse, France</h3>
+          <p>European Operations Center</p>
+        </div>
+        <div class="service-card reveal stagger-3" style="text-align:center;">
+          <div class="service-icon" style="margin:0 auto 1rem;"><i class="fas fa-torii-gate"></i></div>
+          <h3>Tokyo, Japan</h3>
+          <p>Asia-Pacific Engineering Hub</p>
+        </div>
+        <div class="service-card reveal stagger-4" style="text-align:center;">
+          <div class="service-icon" style="margin:0 auto 1rem;"><i class="fas fa-city"></i></div>
+          <h3>Bangalore, India</h3>
+          <p>Software & Analytics Center</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: FAQ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge reveal"><i class="fas fa-circle-question"></i> FAQ</div>
+        <h2 class="section-title reveal stagger-1">Frequently <span>Asked</span></h2>
+      </div>
+      <div style="max-width:700px;margin:0 auto;">
+        <div class="tech-card reveal stagger-1" style="margin-bottom:1rem;">
+          <div class="tech-number" style="font-size:1.5rem;min-width:40px;">Q1</div>
+          <div>
+            <h3>What is the typical timeline for a launch vehicle program?</h3>
+            <p>Typical programs range from 18-36 months from contract award to first flight, depending on complexity and heritage of the design.</p>
+          </div>
+        </div>
+        <div class="tech-card reveal stagger-2" style="margin-bottom:1rem;">
+          <div class="tech-number" style="font-size:1.5rem;min-width:40px;">Q2</div>
+          <div>
+            <h3>Do you offer international shipping for satellite components?</h3>
+            <p>Yes, we have established logistics partnerships for ITAR-compliant and EAR-compliant international shipping to over 40 countries.</p>
+          </div>
+        </div>
+        <div class="tech-card reveal stagger-3" style="margin-bottom:1rem;">
+          <div class="tech-number" style="font-size:1.5rem;min-width:40px;">Q3</div>
+          <div>
+            <h3>Can small startups work with Stackly?</h3>
+            <p>Absolutely. Our Small Satellite program is designed specifically for emerging companies and academic institutions with limited budgets.</p>
+          </div>
+        </div>
+        <div class="tech-card reveal stagger-4">
+          <div class="tech-number" style="font-size:1.5rem;min-width:40px;">Q4</div>
+          <div>
+            <h3>What security clearances does your team hold?</h3>
+            <p>Over 800 of our engineers hold active TS/SCI clearances, and our facilities maintain SECRET through TOP SECRET/SCI accreditation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: MAP -->
+  <section class="section" style="background:var(--primary-light);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge reveal"><i class="fas fa-map-location-dot"></i> Find Us</div>
+        <h2 class="section-title reveal stagger-1">Visit Our <span>HQ</span></h2>
+      </div>
+      <div class="reveal-scale" style="border-radius:var(--radius-xl);overflow:hidden;border:1px solid var(--border);height:400px;background:var(--surface);">
+        <iframe src="https://maps.google.com/maps?q=MMR+Complex+Chinna+Thirupathi+near+Chinna+Muniyappan+Kovil+Salem+Tamil+Nadu+636008&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Stackly Aerospace HQ"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: PARTNERS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge reveal"><i class="fas fa-handshake"></i> Trusted By</div>
+        <h2 class="section-title reveal stagger-1">Our <span>Partners</span></h2>
+      </div>
+      <div class="partners-track reveal stagger-2">
+        <div class="partner-logo"><img src="images/partner-nasa.svg" alt="NASA" height="40"></div>
+        <div class="partner-logo"><img src="images/partner-esa.svg" alt="ESA" height="40"></div>
+        <div class="partner-logo"><img src="images/partner-spacex.svg" alt="SpaceX" height="40"></div>
+        <div class="partner-logo"><img src="images/partner-lockheed.svg" alt="Lockheed Martin" height="40"></div>
+        <div class="partner-logo"><img src="images/partner-boeing.svg" alt="Boeing" height="40"></div>
+        <div class="partner-logo"><img src="images/partner-raytheon.svg" alt="Raytheon Technologies" height="40"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: CTA -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-box reveal-scale">
+        <h2 class="text-shimmer">Ready to Begin?</h2>
+        <p>Start your aerospace journey today. Our mission architects are standing by to discuss your requirements.</p>
+        <div class="cta-actions">
+          <a href="404.html" class="btn btn-primary btn-lg">Create Account <i class="fas fa-rocket"></i></a>
+          <a href="404.html" class="btn btn-secondary btn-lg"><i class="fas fa-phone"></i> Call Us Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: FOOTER -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="images/logo.webp" alt="Stackly">
+        </a>
+        <p>Pioneering the future of aerospace engineering with innovative solutions that push the boundaries of flight and space exploration.</p>
+        <div class="footer-social">
+          <a href="404.html"><i class="fab fa-twitter"></i></a>
+          <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+          <a href="404.html"><i class="fab fa-github"></i></a>
+          <a href="404.html"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Solutions</h4>
+        <ul class="footer-links">
+          <li><a href="services.html">Launch Vehicles</a></li>
+          <li><a href="services.html">Satellite Systems</a></li>
+          <li><a href="services.html">Avionics</a></li>
+          <li><a href="services.html">Propulsion</a></li>
+          <li><a href="services.html">Analytics</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact Us</h4>
+        <ul class="footer-links">
+          <li style="display:flex;gap:0.5rem;align-items:flex-start;"><i class="fas fa-location-dot" style="margin-top:0.3rem;color:var(--accent);flex-shrink:0;"></i><span>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</span></li>
+          <li><i class="fas fa-envelope" style="margin-right:0.5rem;color:var(--accent);"></i><a href="404.html">info@thestackly.com</a></li>
+          <li><i class="fas fa-envelope" style="margin-right:0.5rem;color:var(--accent);"></i><a href="404.html">thestackly@gmail.com</a></li>
+          <li><i class="fab fa-whatsapp" style="margin-right:0.5rem;color:var(--accent);"></i><a href="404.html" target="_blank">+91 70107 92745</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Stackly Aerospace. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="404.html">Privacy Policy</a>
+        <a href="404.html">Terms of Service</a>
+        <a href="404.html">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+  <script src="js/main.js"></script>
+</body>
+</html>
