@@ -27,6 +27,9 @@
       <a href="settings.html" class="sidebar-link"><i class="fas fa-gear"></i><span>Settings</span></a>
       <div class="sidebar-divider"></div>
       <a href="../index.html" class="sidebar-link"><i class="fas fa-arrow-left"></i><span>Back to Site</span></a>
+      <a href="../signin.html" class="sidebar-link sidebar-logout">
+        <i class="fas fa-sign-out-alt"></i><span>Logout</span>
+      </a>
     </nav>
     <div class="sidebar-footer">
       <div class="sidebar-user">
@@ -203,14 +206,19 @@
       <div class="charts-grid">
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Fleet by Manufacturer<span class="card-subtitle">Distribution by brand</span></h3>
+            <div class="card-title-group">
+              <h3 class="card-title">Fleet by Manufacturer</h3>
+              <span class="card-subtitle">Distribution by brand</span>
+            </div>
           </div>
           <div class="chart-body-donut">
-            <div class="donut-center">
-              <span class="donut-value">124</span>
-              <span class="donut-label">Total Fleet</span>
+            <div class="donut-chart-area">
+              <div class="donut-center">
+                <span class="donut-value">124</span>
+                <span class="donut-label">Total Fleet</span>
+              </div>
+              <canvas data-chart="donut" data-values='[58,42,15,9]' data-labels='["Boeing","Airbus","Embraer","Bombardier"]' data-colors='["#38BDF8","#06B6D4","#F59E0B","#22C55E"]'></canvas>
             </div>
-            <canvas data-chart="donut" data-values='[58,42,15,9]' data-labels='["Boeing","Airbus","Embraer","Bombardier"]' data-colors='["#38BDF8","#06B6D4","#F59E0B","#22C55E"]'></canvas>
             <div class="donut-legend">
               <div class="legend-item"><span class="legend-dot" style="background:#38BDF8"></span>Boeing <span class="legend-value">58</span></div>
               <div class="legend-item"><span class="legend-dot" style="background:#06B6D4"></span>Airbus <span class="legend-value">42</span></div>
@@ -221,7 +229,10 @@
         </div>
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Flight Hours Distribution<span class="card-subtitle">Usage analytics</span></h3>
+            <div class="card-title-group">
+              <h3 class="card-title">Flight Hours Distribution</h3>
+              <span class="card-subtitle">Usage analytics</span>
+            </div>
           </div>
           <div class="chart-body">
             <canvas data-chart="bar" data-labels='["0-5K","5K-10K","10K-15K","15K-20K","20K+"]' data-datasets='[{"values":[18,32,40,22,12],"color":"#38BDF8","label":"Aircraft Count"}]'></canvas>

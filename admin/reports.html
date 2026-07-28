@@ -27,6 +27,9 @@
       <a href="settings.html" class="sidebar-link"><i class="fas fa-gear"></i><span>Settings</span></a>
       <div class="sidebar-divider"></div>
       <a href="../index.html" class="sidebar-link"><i class="fas fa-arrow-left"></i><span>Back to Site</span></a>
+      <a href="../signin.html" class="sidebar-link sidebar-logout">
+        <i class="fas fa-sign-out-alt"></i><span>Logout</span>
+      </a>
     </nav>
     <div class="sidebar-footer">
       <div class="sidebar-user">
@@ -113,11 +116,13 @@
             <h3 class="card-title">Passenger Load Factor</h3><span class="card-subtitle">Average seat occupancy</span>
           </div>
           <div class="chart-body-donut">
-            <div class="donut-center">
-              <span class="donut-value">87%</span>
-              <span class="donut-label">Avg Load</span>
+            <div class="donut-chart-area">
+              <div class="donut-center">
+                <span class="donut-value">87%</span>
+                <span class="donut-label">Avg Load</span>
+              </div>
+              <canvas data-chart="donut" data-values='[87,13]' data-labels='["Occupied","Available"]' data-colors='["#38BDF8","#1E293B"]'></canvas>
             </div>
-            <canvas data-chart="donut" data-values='[87,13]' data-labels='["Occupied","Available"]' data-colors='["#38BDF8","#1E293B"]'></canvas>
             <div class="donut-legend">
               <div class="legend-item"><span class="legend-dot" style="background:#38BDF8"></span>Occupied <span class="legend-value">87%</span></div>
               <div class="legend-item"><span class="legend-dot" style="background:#1E293B"></span>Available <span class="legend-value">13%</span></div>

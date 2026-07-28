@@ -118,6 +118,8 @@ body {
   box-shadow: inset 3px 0 0 var(--accent), 0 0 12px rgba(0, 212, 255, 0.08);
 }
 .sidebar-link.active i { color: var(--accent); }
+.sidebar-logout:hover { background: rgba(255, 71, 87, 0.1); color: #ff4757; }
+.sidebar-logout:hover i { color: #ff4757; }
 
 .sidebar-link .sidebar-ripple {
   position: absolute; border-radius: 50%;
@@ -365,7 +367,7 @@ body {
   background: var(--surface);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius);
-  position: relative; overflow: hidden;
+  position: relative;
 }
 .chart-card:hover {
   border-color: rgba(0, 212, 255, 0.2);
@@ -381,7 +383,6 @@ body {
 .chart-card .chart-body,
 .chart-card .card-body { position: relative; }
 .chart-body-donut, .chart-body-activity, .chart-body-table, .chart-body-line { position: relative; }
-.chart-body-donut canvas { max-height: 220px; }
 .chart-filter-btn { background: transparent; border: 1px solid var(--border-light); color: var(--text-secondary); border-radius: 20px; padding: 0.3rem 0.8rem; font-size: 0.75rem; cursor: pointer; transition: var(--transition); text-decoration: none; }
 .chart-filter-btn.active, .chart-filter-btn:hover { border-color: var(--accent); color: var(--accent); background: rgba(0, 212, 255, 0.08); }
 .table-body { overflow-x: auto; }
@@ -472,13 +473,14 @@ body {
 .charts-grid-1 { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
 .chart-body { height: 240px; min-height: 240px; position: relative; }
 .chart-body canvas { width: 100% !important; height: 100% !important; display: block; }
-.chart-body-donut { display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; padding: 0.5rem 0; min-height: 240px; }
-.chart-body-donut canvas { max-height: 200px; max-width: 200px; }
-.donut-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -55%); display: flex; flex-direction: column; align-items: center; pointer-events: none; }
-.donut-value { font-family: 'Orbitron', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--text-primary); }
-.donut-label { font-size: 0.72rem; color: var(--text-secondary); }
-.donut-legend { display: flex; flex-wrap: wrap; gap: 0.6rem 1rem; margin-top: 0.75rem; justify-content: center; width: 100%; }
-.legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.72rem; color: var(--text-secondary); white-space: nowrap; }
+.chart-body-donut { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; position: relative; padding: 0.5rem 0 0; width: 100%; height: auto; min-height: 0; overflow: visible; }
+.donut-chart-area { position: relative; width: 340px; max-width: 100%; aspect-ratio: 1 / 1; flex-shrink: 0; margin: 0 auto; }
+.donut-chart-area canvas { width: 100% !important; height: 100% !important; display: block; }
+.donut-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; pointer-events: none; z-index: 2; }
+.donut-value { font-family: 'Orbitron', sans-serif; font-size: 1.6rem; font-weight: 700; color: var(--text-primary); }
+.donut-label { font-size: 0.78rem; color: var(--text-secondary); margin-top: 0.15rem; }
+.donut-legend { display: flex; flex-wrap: wrap; gap: 0.6rem 1.25rem; padding: 1rem 0 0.25rem; justify-content: center; width: 100%; }
+.legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; color: var(--text-secondary); white-space: nowrap; }
 .legend-dot { width: 8px; height: 8px; border-radius: 3px; flex-shrink: 0; }
 .legend-value { font-weight: 600; color: var(--text-primary); margin-left: 0.25rem; }
 
@@ -1287,7 +1289,8 @@ body {
   .topbar-breadcrumb { font-size: 0.8rem; }
 
   .chart-body { height: 200px; min-height: 200px; }
-  .chart-body-donut canvas { max-height: 160px; }
+  .donut-chart-area { width: 280px; }
+  .donut-value { font-size: 1.3rem; }
   .donut-legend { gap: 0.4rem 0.75rem; }
   .legend-item { font-size: 0.68rem; }
 
@@ -1360,6 +1363,10 @@ body {
   .chart-card { border-radius: var(--radius-sm); }
   .chart-body { height: 180px; }
   .chart-title { font-size: 0.9rem; }
+  .donut-chart-area { width: 260px; }
+  .donut-value { font-size: 1.2rem; }
+  .donut-label { font-size: 0.72rem; }
+  .legend-item { font-size: 0.72rem; }
 
   .data-table td, .data-table th { padding: 0.45rem 0.5rem; font-size: 0.72rem; }
   .data-table th { font-size: 0.65rem; }
@@ -1403,6 +1410,11 @@ body {
 
   .card { padding: 0.85rem; }
   .chart-body { height: 160px; }
+  .donut-chart-area { width: 220px; }
+  .donut-value { font-size: 1.1rem; }
+  .donut-label { font-size: 0.68rem; }
+  .donut-legend { gap: 0.3rem 0.6rem; }
+  .legend-item { font-size: 0.68rem; }
 
   .data-table { font-size: 0.7rem; }
   .data-table td, .data-table th { padding: 0.4rem; }

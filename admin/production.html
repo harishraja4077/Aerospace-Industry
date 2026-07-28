@@ -27,6 +27,9 @@
       <a href="settings.html" class="sidebar-link"><i class="fas fa-gear"></i><span>Settings</span></a>
       <div class="sidebar-divider"></div>
       <a href="../index.html" class="sidebar-link"><i class="fas fa-arrow-left"></i><span>Back to Site</span></a>
+      <a href="../signin.html" class="sidebar-link sidebar-logout">
+        <i class="fas fa-sign-out-alt"></i><span>Logout</span>
+      </a>
     </nav>
     <div class="sidebar-footer">
       <div class="sidebar-user">
@@ -190,11 +193,13 @@
             <span class="card-subtitle">Order distribution by aircraft model</span>
           </div>
           <div class="chart-body-donut">
-            <div class="donut-center">
-              <span class="donut-value">38</span>
-              <span class="donut-label">Active Orders</span>
+            <div class="donut-chart-area">
+              <div class="donut-center">
+                <span class="donut-value">38</span>
+                <span class="donut-label">Active Orders</span>
+              </div>
+              <canvas data-chart="donut" data-values='[15,10,8,5]' data-labels='["Boeing 787/777","Airbus A350/A321","Boeing 737","Others"]' data-colors='["#38BDF8","#06B6D4","#F59E0B","#22C55E"]'></canvas>
             </div>
-            <canvas data-chart="donut" data-values='[15,10,8,5]' data-labels='["Boeing 787/777","Airbus A350/A321","Boeing 737","Others"]' data-colors='["#38BDF8","#06B6D4","#F59E0B","#22C55E"]'></canvas>
             <div class="donut-legend">
               <div class="legend-item"><span class="legend-dot" style="background:#38BDF8"></span>Boeing 787/777 <span class="legend-value">15</span></div>
               <div class="legend-item"><span class="legend-dot" style="background:#06B6D4"></span>Airbus A350/A321 <span class="legend-value">10</span></div>

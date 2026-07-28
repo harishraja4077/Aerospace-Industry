@@ -606,6 +606,15 @@ function observeAndAnimate(canvas, fn) {
   window.addEventListener('resize', fn);
 }
 
+/* ===== SEARCH BAR REDIRECT ===== */
+document.querySelectorAll('.topbar-search input').forEach(input => {
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Enter' && input.value.trim()) {
+      window.location.href = '../404.html';
+    }
+  });
+});
+
 /* ===== CHART RESIZE ===== */
 let resizeTimer;
 window.addEventListener('resize', () => {

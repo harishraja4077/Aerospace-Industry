@@ -25,6 +25,9 @@
       <a href="profile.html" class="sidebar-link"><i class="fas fa-user"></i><span>Profile</span></a>
       <div class="sidebar-divider"></div>
       <a href="../index.html" class="sidebar-link"><i class="fas fa-arrow-left"></i><span>Back to Site</span></a>
+      <a href="../signin.html" class="sidebar-link sidebar-logout">
+        <i class="fas fa-sign-out-alt"></i><span>Logout</span>
+      </a>
     </nav>
     <div class="sidebar-footer">
       <div class="sidebar-user">
@@ -76,8 +79,10 @@
         <div class="chart-card glass" data-animate>
           <div class="chart-header"><h3 class="chart-title">Tasks by Category</h3></div>
           <div class="chart-body chart-body-donut">
-            <canvas data-chart="donut" data-values='[35,25,20,15,5]' data-labels='["Engine","Airframe","Avionics","Hydraulics","Other"]' data-colors='["#38BDF8","#06B6D4","#F59E0B","#22C55E","#A855F7"]'></canvas>
-            <div class="donut-center"><span class="donut-value">23</span><span class="donut-label">Total Tasks</span></div>
+            <div class="donut-chart-area">
+              <canvas data-chart="donut" data-values='[35,25,20,15,5]' data-labels='["Engine","Airframe","Avionics","Hydraulics","Other"]' data-colors='["#38BDF8","#06B6D4","#F59E0B","#22C55E","#A855F7"]'></canvas>
+              <div class="donut-center"><span class="donut-value">23</span><span class="donut-label">Total Tasks</span></div>
+            </div>
             <div class="chart-legend">
               <div class="legend-item"><span class="legend-color" style="background:#38BDF8;"></span>Engine</div>
               <div class="legend-item"><span class="legend-color" style="background:#06B6D4;"></span>Airframe</div>

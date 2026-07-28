@@ -46,6 +46,9 @@
       <a href="../index.html" class="sidebar-link">
         <i class="fas fa-arrow-left"></i><span>Back to Site</span>
       </a>
+      <a href="../signin.html" class="sidebar-link sidebar-logout">
+        <i class="fas fa-sign-out-alt"></i><span>Logout</span>
+      </a>
     </nav>
 
     <div class="sidebar-footer">
@@ -189,11 +192,13 @@
             </div>
           </div>
           <div class="card-body chart-body-donut">
-            <div class="donut-center">
-              <span class="donut-value">124</span>
-              <span class="donut-label">Total Tasks</span>
+            <div class="donut-chart-area">
+              <div class="donut-center">
+                <span class="donut-value">124</span>
+                <span class="donut-label">Total Tasks</span>
+              </div>
+              <canvas data-chart="donut" data-values='[45,25,20,10]' data-labels='["Routine","Overhaul","Repair","Inspection"]' data-colors='["#00d4ff","#7b2ff7","#ffa502","#2ed573"]'></canvas>
             </div>
-            <canvas data-chart="donut" data-values='[45,25,20,10]' data-labels='["Routine","Overhaul","Repair","Inspection"]' data-colors='["#00d4ff","#7b2ff7","#ffa502","#2ed573"]'></canvas>
             <div class="donut-legend">
               <div class="legend-item"><span class="legend-dot" style="background:#00d4ff"></span>Routine <span class="legend-value">45%</span></div>
               <div class="legend-item"><span class="legend-dot" style="background:#7b2ff7"></span>Overhaul <span class="legend-value">25%</span></div>
