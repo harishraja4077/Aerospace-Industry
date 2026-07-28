@@ -507,10 +507,8 @@ window.addEventListener('pageshow', function (event) {
   document.body.style.position = '';
   document.body.style.width = '';
 
-  // Restore scroll position (browsers usually handle this, but ensure it)
-  if (event.persisted) {
-    window.scrollTo(0, 0);
-  }
+  // Let the browser restore the previous scroll position from bfcache
+  // (browsers handle this automatically — do not force scrollTo(0,0))
 });
 
 // ===== FIX: VISIBILITYCHANGE SAFETY NET =====
