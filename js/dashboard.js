@@ -165,17 +165,32 @@ function initCharts() {
 
 function setupCanvas(canvas) {
   const dpr = window.devicePixelRatio || 1;
-  const rect = canvas.parentElement.getBoundingClientRect();
-  canvas.width = rect.width * dpr;
-  canvas.height = rect.height * dpr;
+  const parent = canvas.parentElement;
+  const rect = parent.getBoundingClientRect();
+  const w = rect.width || parent.offsetWidth || 300;
+  const h = rect.height || parent.offsetHeight || 240;
+  canvas.width = w * dpr;
+  canvas.height = h * dpr;
+  canvas.style.width = w + 'px';
+  canvas.style.height = h + 'px';
   const ctx = canvas.getContext('2d');
   ctx.scale(dpr, dpr);
-  return { ctx, w: rect.width, h: rect.height };
+  return { ctx, w, h };
 }
 
 function drawBarChart(canvas) {
-  const raw = JSON.parse(canvas.dataset.values || '[]');
+  const datasets = JSON.parse(canvas.dataset.datasets || '[]');
+  const singleValues = JSON.parse(canvas.dataset.values || '[]');
   const labels = JSON.parse(canvas.dataset.labels || '[]');
+
+  if (datasets.length) {
+    drawGroupedBarChart(canvas, datasets, labels);
+  } else if (singleValues.length) {
+    drawSingleBarChart(canvas, singleValues, labels);
+  }
+}
+
+function drawSingleBarChart(canvas, raw, labels) {
   if (!raw.length) return;
   let anim = 0;
 
@@ -217,6 +232,66 @@ function drawBarChart(canvas) {
     });
 
     if (anim < 1) { anim += 0.03; requestAnimationFrame(render); }
+  }
+  observeAndAnimate(canvas, render);
+}
+
+function drawGroupedBarChart(canvas, datasets, labels) {
+  if (!datasets.length || !labels.length) return;
+  let anim = 0;
+  const allVals = datasets.flatMap(d => d.values);
+
+  function render() {
+    const { ctx, w, h } = setupCanvas(canvas);
+    const pad = { t: 15, r: 15, b: 30, l: 40 };
+    const cw = w - pad.l - pad.r, ch = h - pad.t - pad.b;
+    const max = Math.max(...allVals) * 1.15;
+    const groupCount = labels.length;
+    const groupWidth = cw / groupCount;
+    const barCount = datasets.length;
+    const barGap = 3;
+    const barWidth = (groupWidth - barGap * (barCount + 1)) / barCount;
+
+    ctx.clearRect(0, 0, w, h);
+    for (let i = 0; i <= 4; i++) {
+      const y = pad.t + (ch / 4) * i;
+      ctx.strokeStyle = 'rgba(0,212,255,0.06)'; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(w - pad.r, y); ctx.stroke();
+      ctx.fillStyle = '#495670'; ctx.font = '10px Inter'; ctx.textAlign = 'right';
+      ctx.fillText(Math.round(max - (max / 4) * i), pad.l - 6, y + 3);
+    }
+
+    labels.forEach((label, gi) => {
+      const groupX = pad.l + groupWidth * gi;
+
+      datasets.forEach((ds, di) => {
+        const v = ds.values[gi] || 0;
+        const x = groupX + barGap + (barWidth + barGap) * di;
+        const bh = (v / max) * ch * Math.min(anim, 1);
+        const y = pad.t + ch - bh;
+        const radius = 3;
+
+        const grad = ctx.createLinearGradient(x, y, x, pad.t + ch);
+        grad.addColorStop(0, ds.color);
+        grad.addColorStop(1, ds.color + '15');
+        ctx.fillStyle = grad;
+        ctx.beginPath();
+        ctx.moveTo(x + radius, y);
+        ctx.lineTo(x + barWidth - radius, y);
+        ctx.quadraticCurveTo(x + barWidth, y, x + barWidth, y + radius);
+        ctx.lineTo(x + barWidth, pad.t + ch);
+        ctx.lineTo(x, pad.t + ch);
+        ctx.lineTo(x, y + radius);
+        ctx.quadraticCurveTo(x, y, x + radius, y);
+        ctx.closePath();
+        ctx.fill();
+      });
+
+      ctx.fillStyle = '#495670'; ctx.font = '10px Inter'; ctx.textAlign = 'center';
+      ctx.fillText(label, groupX + groupWidth / 2, h - pad.b + 16);
+    });
+
+    if (anim < 1) { anim += 0.025; requestAnimationFrame(render); }
   }
   observeAndAnimate(canvas, render);
 }
@@ -493,7 +568,7 @@ function initMagneticHover() {
 
 /* ===== SCROLL REVEAL ===== */
 function initScrollReveal() {
-  const elements = document.querySelectorAll('.welcome-banner, .stats-grid, .charts-grid, .bottom-grid, .card, .settings-card, .fleet-item, .ticket-item, .doc-item, .page-header');
+  const elements = document.querySelectorAll('.welcome-banner, .stats-grid, .charts-grid, .charts-grid-equal, .bottom-grid, .card, .settings-card, .fleet-item, .ticket-item, .doc-item, .page-header');
   elements.forEach(el => el.classList.add('reveal'));
   const observer = new IntersectionObserver(entries => {
     entries.forEach((entry, i) => {
@@ -502,7 +577,7 @@ function initScrollReveal() {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.05 });
   elements.forEach(el => observer.observe(el));
 }
 

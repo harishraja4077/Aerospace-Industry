@@ -204,6 +204,121 @@
         </div>
       </div>
 
+      <!-- ANALYTICS ROW -->
+      <div class="charts-grid-equal">
+
+        <!-- FLIGHT HOURS DISTRIBUTION -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <h3 class="card-title">Flight Hours Distribution</h3>
+              <span class="card-subtitle">Usage analytics by aircraft type</span>
+            </div>
+            <div class="card-actions">
+              <a href="../404.html" class="chip active">This Month</a>
+              <a href="../404.html" class="chip">YTD</a>
+            </div>
+          </div>
+          <div class="usage-analytics">
+            <div class="usage-bar-group">
+              <div class="usage-bar-row">
+                <span class="usage-bar-label">B787-9</span>
+                <div class="usage-bar-track"><div class="usage-bar-fill" style="width:92%;background:var(--accent-gradient)"></div></div>
+                <span class="usage-bar-value">1,842h</span>
+              </div>
+              <div class="usage-bar-row">
+                <span class="usage-bar-label">A350-1000</span>
+                <div class="usage-bar-track"><div class="usage-bar-fill" style="width:85%;background:linear-gradient(90deg,#7b2ff7,#a78bfa)"></div></div>
+                <span class="usage-bar-value">1,698h</span>
+              </div>
+              <div class="usage-bar-row">
+                <span class="usage-bar-label">B777-300ER</span>
+                <div class="usage-bar-track"><div class="usage-bar-fill" style="width:78%;background:linear-gradient(90deg,#2ed573,#7bed9f)"></div></div>
+                <span class="usage-bar-value">1,556h</span>
+              </div>
+              <div class="usage-bar-row">
+                <span class="usage-bar-label">A380-800</span>
+                <div class="usage-bar-track"><div class="usage-bar-fill" style="width:71%;background:linear-gradient(90deg,#ffa502,#ffbe76)"></div></div>
+                <span class="usage-bar-value">1,418h</span>
+              </div>
+              <div class="usage-bar-row">
+                <span class="usage-bar-label">A330-900neo</span>
+                <div class="usage-bar-track"><div class="usage-bar-fill" style="width:64%;background:linear-gradient(90deg,#ff4757,#ff6b81)"></div></div>
+                <span class="usage-bar-value">1,280h</span>
+              </div>
+              <div class="usage-bar-row">
+                <span class="usage-bar-label">B737 MAX 8</span>
+                <div class="usage-bar-track"><div class="usage-bar-fill" style="width:56%;background:linear-gradient(90deg,#38bdf8,#7dd3fc)"></div></div>
+                <span class="usage-bar-value">1,120h</span>
+              </div>
+              <div class="usage-bar-row">
+                <span class="usage-bar-label">A320neo</span>
+                <div class="usage-bar-track"><div class="usage-bar-fill" style="width:48%;background:linear-gradient(90deg,#c084fc,#e879f9)"></div></div>
+                <span class="usage-bar-value">964h</span>
+              </div>
+            </div>
+            <div class="usage-summary">
+              <div class="usage-summary-card">
+                <span class="usage-summary-value">11,856</span>
+                <span class="usage-summary-label">Total Flight Hours</span>
+              </div>
+              <div class="usage-summary-card">
+                <span class="usage-summary-value">87.4%</span>
+                <span class="usage-summary-label">Fleet Utilization</span>
+              </div>
+              <div class="usage-summary-card">
+                <span class="usage-summary-value">+6.2%</span>
+                <span class="usage-summary-label">vs Last Month</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MONTHLY DELIVERIES -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <h3 class="card-title">Monthly Deliveries</h3>
+              <span class="card-subtitle">Deliveries vs delays by month</span>
+            </div>
+            <div class="card-actions">
+              <a href="../404.html" class="chip active">2026</a>
+              <a href="../404.html" class="chip">2025</a>
+            </div>
+          </div>
+          <div class="card-body chart-body">
+            <canvas data-chart="bar" data-labels='["Jan","Feb","Mar","Apr","May","Jun","Jul"]' data-datasets='[{"values":[18,22,19,26,24,28,30],"color":"#2ed573","label":"Delivered"},{"values":[3,5,2,4,6,3,2],"color":"#ff4757","label":"Delayed"}]'></canvas>
+          </div>
+          <div class="delivery-legend">
+            <div class="legend-item"><span class="legend-dot" style="background:#2ed573"></span>Delivered</div>
+            <div class="legend-item"><span class="legend-dot" style="background:#ff4757"></span>Delayed</div>
+          </div>
+          <div class="delivery-stats">
+            <div class="delivery-stat">
+              <span class="delivery-stat-dot" style="background:#2ed573"></span>
+              <span class="delivery-stat-label">Delivered</span>
+              <span class="delivery-stat-value">167</span>
+            </div>
+            <div class="delivery-stat">
+              <span class="delivery-stat-dot" style="background:#ff4757"></span>
+              <span class="delivery-stat-label">Delayed</span>
+              <span class="delivery-stat-value">25</span>
+            </div>
+            <div class="delivery-stat">
+              <span class="delivery-stat-dot" style="background:#00d4ff"></span>
+              <span class="delivery-stat-label">On-Time Rate</span>
+              <span class="delivery-stat-value">86.9%</span>
+            </div>
+            <div class="delivery-stat">
+              <span class="delivery-stat-dot" style="background:#ffa502"></span>
+              <span class="delivery-stat-label">Avg Delay</span>
+              <span class="delivery-stat-value">3.2 days</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
       <!-- BOTTOM ROW -->
       <div class="bottom-grid">
         <!-- RECENT FLIGHTS TABLE -->

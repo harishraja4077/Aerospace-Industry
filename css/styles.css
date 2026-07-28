@@ -914,6 +914,8 @@ body {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card::before {
@@ -987,6 +989,8 @@ body {
   font-weight: 600;
   text-decoration: none;
   transition: var(--transition);
+  margin-top: auto;
+  padding-top: 1.25rem;
 }
 
 .service-card .learn-more:hover {
