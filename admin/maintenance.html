@@ -198,10 +198,118 @@
       <div class="card">
         <div class="card-header">
           <h3 class="card-title">Maintenance Timeline</h3>
-          <span class="card-subtitle">Weekly overview</span>
+          <span class="card-subtitle">Upcoming & recent activity</span>
+          <div class="card-actions">
+            <a href="../404.html" class="chip active">All</a>
+            <a href="../404.html" class="chip">Critical</a>
+            <a href="../404.html" class="chip">Scheduled</a>
+          </div>
         </div>
-        <div class="chart-body">
-          <canvas data-chart="bar" data-labels='["Week 28","Week 29","Week 30","Week 31","Week 32","Week 33"]' data-datasets='[{"values":[12,18,15,22,10,8],"color":"#38BDF8","label":"Scheduled"},{"values":[3,5,2,4,6,1],"color":"#EF4444","label":"AOG"}]'></canvas>
+        <div class="dash-timeline">
+          <div class="dash-timeline-line"></div>
+
+          <div class="dash-timeline-item">
+            <div class="dash-timeline-dot critical"></div>
+            <div class="dash-timeline-content">
+              <div class="dash-timeline-header">
+                <span class="dash-timeline-badge critical">Critical</span>
+                <span class="dash-timeline-id">WO-4521</span>
+                <span class="dash-timeline-date">Jul 20, 2026</span>
+              </div>
+              <h4 class="dash-timeline-title">Engine Overhaul — B777-300ER (A6ECT)</h4>
+              <p class="dash-timeline-desc">Full GE90-115B engine teardown, NDT inspection, and reassembly. AOG status confirmed.</p>
+              <div class="dash-timeline-footer">
+                <span class="dash-timeline-tech"><i class="fas fa-user-wrench"></i> Mike Reynolds</span>
+                <span class="dash-timeline-progress"><span class="dash-progress-track"><span class="dash-progress-fill" style="width:65%"></span></span>65%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-timeline-item">
+            <div class="dash-timeline-dot high"></div>
+            <div class="dash-timeline-content">
+              <div class="dash-timeline-header">
+                <span class="dash-timeline-badge high">High</span>
+                <span class="dash-timeline-id">WO-4518</span>
+                <span class="dash-timeline-date">Jul 18, 2026</span>
+              </div>
+              <h4 class="dash-timeline-title">Avionics Upgrade — A330-900neo (B-5968)</h4>
+              <p class="dash-timeline-desc">FMS v3.2 upgrade with ADS-B Out Phase 2 compliance. Software load and integration testing.</p>
+              <div class="dash-timeline-footer">
+                <span class="dash-timeline-tech"><i class="fas fa-user-wrench"></i> Sarah Chen</span>
+                <span class="dash-timeline-progress"><span class="dash-progress-track"><span class="dash-progress-fill" style="width:40%"></span></span>40%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-timeline-item">
+            <div class="dash-timeline-dot medium"></div>
+            <div class="dash-timeline-content">
+              <div class="dash-timeline-header">
+                <span class="dash-timeline-badge medium">Medium</span>
+                <span class="dash-timeline-id">WO-4515</span>
+                <span class="dash-timeline-date">Jul 15, 2026</span>
+              </div>
+              <h4 class="dash-timeline-title">Routine A-Check — B787-9 (N789BA)</h4>
+              <p class="dash-timeline-desc">Scheduled A-Check per MPD. Airframe inspection, lubrication, and filter replacements. Awaiting hydraulic fluid shipment.</p>
+              <div class="dash-timeline-footer">
+                <span class="dash-timeline-tech"><i class="fas fa-user-wrench"></i> David Park</span>
+                <span class="dash-timeline-status awaiting"><i class="fas fa-box"></i> Awaiting Parts</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-timeline-item">
+            <div class="dash-timeline-dot critical"></div>
+            <div class="dash-timeline-content">
+              <div class="dash-timeline-header">
+                <span class="dash-timeline-badge critical">Critical</span>
+                <span class="dash-timeline-id">WO-4512</span>
+                <span class="dash-timeline-date">Jul 12, 2026</span>
+              </div>
+              <h4 class="dash-timeline-title">Landing Gear Overhaul — A380-800 (A6-EUA)</h4>
+              <p class="dash-timeline-desc">Main MLG strut overhaul with seal kit replacement. Full functional and leak check after reassembly.</p>
+              <div class="dash-timeline-footer">
+                <span class="dash-timeline-tech"><i class="fas fa-user-wrench"></i> James Wright</span>
+                <span class="dash-timeline-progress"><span class="dash-progress-track"><span class="dash-progress-fill" style="width:25%"></span></span>25%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-timeline-item">
+            <div class="dash-timeline-dot medium"></div>
+            <div class="dash-timeline-content">
+              <div class="dash-timeline-header">
+                <span class="dash-timeline-badge medium">Medium</span>
+                <span class="dash-timeline-id">WO-4510</span>
+                <span class="dash-timeline-date">Jul 10, 2026</span>
+              </div>
+              <h4 class="dash-timeline-title">C-Check — A350-1000 (F-WWGG)</h4>
+              <p class="dash-timeline-desc">Heavy maintenance C-Check. Structural inspection, system functional checks, and corrosion treatment.</p>
+              <div class="dash-timeline-footer">
+                <span class="dash-timeline-tech"><i class="fas fa-user-wrench"></i> Anna Kowalski</span>
+                <span class="dash-timeline-status scheduled"><i class="fas fa-calendar-check"></i> Scheduled Aug 05</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-timeline-item completed">
+            <div class="dash-timeline-dot completed"></div>
+            <div class="dash-timeline-content">
+              <div class="dash-timeline-header">
+                <span class="dash-timeline-badge completed">Completed</span>
+                <span class="dash-timeline-id">WO-4501</span>
+                <span class="dash-timeline-date">Jul 08, 2026</span>
+              </div>
+              <h4 class="dash-timeline-title">Structural Repair — B737 MAX 8 (N378BA)</h4>
+              <p class="dash-timeline-desc">Fuselage panel crack repair per SB 737-53-1234. Doubler installation and NDT verification completed.</p>
+              <div class="dash-timeline-footer">
+                <span class="dash-timeline-tech"><i class="fas fa-user-wrench"></i> Tom Martinez</span>
+                <span class="dash-timeline-status done"><i class="fas fa-check-circle"></i> Completed</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
