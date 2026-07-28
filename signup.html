@@ -111,7 +111,8 @@
   <div class="page-transition"></div>
 
   <div class="auth-wrapper">
-    <div class="auth-bg">
+    <div class="auth-bg" style="background-image:url('images/rocket-launch-night.webp');background-size:cover;background-position:center;">
+      <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,22,40,0.92),rgba(10,22,40,0.85),rgba(10,22,40,0.92));"></div>
       <div class="auth-bg-gradient"></div>
       <div class="auth-bg-gradient"></div>
       <div class="hero-grid-overlay"></div>
@@ -131,17 +132,13 @@
       <h2 style="font-family:'Orbitron',sans-serif;font-size:1.6rem;font-weight:800;text-align:center;margin-bottom:0.5rem;">Create Account</h2>
       <p class="auth-subtitle" style="text-align:center;color:var(--text-secondary);font-size:0.9rem;margin-bottom:1rem;">Join the future of aerospace. <a href="signin.html" style="color:var(--accent);text-decoration:none;font-weight:600;">Already have an account?</a></p>
 
-      <div style="text-align:center;margin-bottom:1.5rem;">
-        <img src="images/rocket-launch-night.webp" alt="Rocket Launch" style="width:100%;max-height:140px;object-fit:cover;border-radius:12px;border:1px solid var(--border);opacity:0.85;">
-      </div>
-
       <div class="role-toggle" id="role-toggle">
         <button type="button" class="role-toggle-btn active" data-role="user"><i class="fas fa-user"></i> User</button>
         <button type="button" class="role-toggle-btn" data-role="admin"><i class="fas fa-shield"></i> Admin</button>
       </div>
       <input type="hidden" id="signup-role" value="user">
 
-      <form class="auth-form" id="signup-form" onsubmit="event.preventDefault();const btn=this.querySelector('button[type=submit]');const role=document.getElementById('signup-role').value;btn.innerHTML='<i class=\'fas fa-spinner fa-spin\'></i> Creating...';btn.disabled=true;setTimeout(()=>{btn.innerHTML='<i class=\'fas fa-check\'></i> Created!';btn.style.background='var(--success)';setTimeout(()=>window.location.href='signin.html',800)},1500)">
+      <form class="auth-form" id="signup-form" onsubmit="event.preventDefault();const emailInput=this.querySelector('input[type=email]');const pw=document.getElementById('signup-password').value;if(!emailInput.value.endsWith('@gmail.com')){alert('Please use a Gmail address (@gmail.com)');return;}if(pw.length<8){alert('Password must be at least 8 characters.');return;}if(!/[A-Z]/.test(pw)){alert('Password must contain at least one uppercase letter.');return;}if(!/[0-9]/.test(pw)){alert('Password must contain at least one number.');return;}if(!/[^A-Za-z0-9]/.test(pw)){alert('Password must contain at least one special character.');return;}const btn=this.querySelector('button[type=submit]');const role=document.getElementById('signup-role').value;btn.innerHTML='<i class=\'fas fa-spinner fa-spin\'></i> Creating...';btn.disabled=true;setTimeout(()=>{btn.innerHTML='<i class=\'fas fa-check\'></i> Created!';btn.style.background='var(--success)';setTimeout(()=>window.location.href='signin.html',800)},1500)">
         <div class="form-row">
           <div class="form-group">
             <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--text-primary);margin-bottom:0.5rem;font-family:'Rajdhani',sans-serif;">First Name</label>

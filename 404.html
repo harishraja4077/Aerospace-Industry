@@ -29,16 +29,13 @@
   </nav>
 
   <div class="error-wrapper">
-    <div class="error-bg">
+    <div class="error-bg" style="background-image:url('images/hero-space.webp');background-size:cover;background-position:center;">
+      <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,22,40,0.92),rgba(10,22,40,0.85),rgba(10,22,40,0.92));"></div>
       <div class="auth-bg-gradient"></div>
       <div class="auth-bg-gradient"></div>
       <div class="hero-grid-overlay"></div>
     </div>
     <div class="error-content">
-      <div class="error-illustration reveal-scale" style="margin-bottom:2rem;">
-        <img src="images/hero-space.webp" alt="Lost in Space" style="max-width:280px;width:100%;height:auto;border-radius:var(--radius-xl);border:1px solid var(--border);box-shadow:var(--shadow-glow);opacity:0.9;">
-      </div>
-
       <div class="error-code reveal stagger-1">404</div>
       <h1 class="error-title reveal stagger-2">Lost in Space</h1>
       <p class="error-text reveal stagger-3">
@@ -50,14 +47,7 @@
         <button onclick="if(window.history.length>1){window.history.back();}else{window.location.href='index.html';}" class="btn btn-ghost btn-lg"><i class="fas fa-arrow-left"></i> Go Back</button>
       </div>
 
-      <div class="reveal stagger-5" style="margin-top:3rem;">
-        <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:1rem;">Or try one of these:</p>
-        <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
-          <a href="about.html" class="btn btn-ghost btn-sm">About Us</a>
-          <a href="services.html" class="btn btn-ghost btn-sm">Services</a>
-          <a href="blog.html" class="btn btn-ghost btn-sm">Blog</a>
-          <a href="signin.html" class="btn btn-ghost btn-sm">Sign In</a>
-        </div>
+     
       </div>
     </div>
   </div>
